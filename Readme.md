@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Antonina Khisametdinova](https://up.htmlacademy.ru/htmlcss/20/user/619123).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Тарасов](https://htmlacademy.ru/profile/tarasoff).
 
 ---
 
