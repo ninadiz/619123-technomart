@@ -5,42 +5,47 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
-  	<header class="main-header">
-  		<div class="purchase-panel">
-  			<a class="main-button-logo">ТЕХНОМАРТ</a>
-  			<input type="search" name="Поиск">
-  			<ul>
-  				<li><a href="bookmarks.html">Закладки</a></li>
-  				<li><a href="basket.html">Корзина</a></li>
-  				<li><a href="purchase.html">Оформить заказ</a></li>
-  			</ul>
-  		</div>
-  		<div class="info-panel">
-  			<p class="info-descriptor">
-  				Интернет-магазин<br>
-  				строительных материалов<br>
-  				и инструментов для ремонта
-  			</p>
-  			<a href="tel:+78125550555">+7 (812) 555-05-55</a>
-  			<p>
-  				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-  			</p>
-  			<ul class="user-navigation">
-  				<li><a href="#">Равшан Джамшутович</a></li>
-  				<li><a href="#">Выйти</a></li>
-  				<li><a href="#">Мои заказы</a></li>
-  				<li><a href="#">Личный кабинет</a></li>
-  			</ul>
-  		</div>
-  		<nav class="main-navigation">
-  			<ul class="site-navigation">
-  				<li><a href="#">Главная</a></li>
-  				<li><a href="#">Компания</a></li>
-  				<li><a href="#">Каталог</a></li>
-  				<li><a href="#">Новости</a></li>
-  				<li><a href="#">Спецпредложения</a></li>
-  				<li><a href="#">Доставка</a></li>
-  				<li><a href="#">Контакты</a></li>
+    <header class="main-header">
+      <div class="purchase-panel">
+        <a class="header-button-logo">ТЕХНОМАРТ</a>
+        <input type="header-search" name="Поиск">
+        <!-- В заметке задания в ЛК пишут, что надо использовать span для незнакомых интерактивных элементов. Подозреваю, что это тут. Как? -->
+        <ul class="purchase-panel-links">
+          <li><a class="purchase-panel-link" href="bookmarks.html">Закладки</a></li>
+          <li><a class="purchase-panel-link" href="basket.html">Корзина</a></li>
+          <li><a class="purchase-panel-link" href="purchase.html">Оформить заказ</a></li>
+        </ul>
+      </div>
+      <div class="info-panel">
+        <p class="info-panel-descriptor">
+          Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта
+        </p>
+        <a class="info-panel-contacts" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <p class="info-panel-address">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </p>
+        <ul class="user-navigation">
+          <li><a href="#">Равшан Джамшутович</a></li>
+          <li><a href="#">Выйти</a></li>
+          <li><a href="#">Мои заказы</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+        </ul>
+      </div>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a class="site-nav-link" href="index.html">Главная</a></li>
+          <li><a class="site-nav-link" href="company.html">Компания</a></li>
+          <li><a class="site-nav-link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-nav-link" href="news.html">Новости</a></li>
+          <li><a class="site-nav-link" href="special-offer.html">Спецпредложения</a></li>
+          <li><a class="site-nav-link" href="delivery.html">Доставка</a></li>
+          <li><a class="site-nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
   			</ul>
   		</nav>
   	</header>
@@ -157,7 +162,7 @@
         </p>
       </section>
   	</main>
-        <footer class="main-footer">
+    <footer class="main-footer">
       <a class="footer-button-logo">ТЕХНОМАРТ</a>
       <p> г. Санкт-Петербург, ул. Б. Конюшенная, д.<br>
         19/8 +7 (812) 555-05-55
@@ -196,6 +201,6 @@
         <b>Разработано</b>
         <a href="#">htmlacademy.ru</a>
       </p>
-      </footer>
+    </footer>
   </body>
 </html>

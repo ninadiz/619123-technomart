@@ -7,41 +7,39 @@
   <body>
   	<header class="main-header">
   		<div class="purchase-panel">
-  			<a class="main-button-logo">ТЕХНОМАРТ</a>
-  			<input type="search" name="Поиск">
+  			<a class="header-button-logo">ТЕХНОМАРТ</a>
+  			<input type="header-search" name="Поиск">
   			<!-- В заметке задания в ЛК пишут, что надо использовать span для незнакомых интерактивных элементов. Подозреваю, что это тут. Как? -->
-  			<ul>
-  				<li><a href="bookmarks.html">Закладки</a></li>
-  				<li><a href="basket.html">Корзина</a></li>
-  				<li><a href="purchase.html">Оформить заказ</a></li>
+  			<ul class="purchase-panel-links">
+  				<li><a class="purchase-panel-link" href="bookmarks.html">Закладки</a></li>
+  				<li><a class="purchase-panel-link" href="basket.html">Корзина</a></li>
+  				<li><a class="purchase-panel-link" href="purchase.html">Оформить заказ</a></li>
   			</ul>
   		</div>
   		<div class="info-panel">
-  			<p class="info-descriptor">
+  			<p class="info-panel-descriptor">
   				Интернет-магазин<br>
   				строительных материалов<br>
   				и инструментов для ремонта
   			</p>
-  			<a href="tel:+78125550555">+7 (812) 555-05-55</a>
-  			<p>
+  			<a class="info-panel-contacts" href="tel:+78125550555">+7 (812) 555-05-55</a>
+  			<p class="info-panel-address">
   				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
   			</p>
-  			<ul class="user-navigation">
-  				<li><a href="#">Равшан Джамшутович</a></li>
-  				<li><a href="#">Выйти</a></li>
-  				<li><a href="#">Мои заказы</a></li>
-  				<li><a href="#">Личный кабинет</a></li>
+  			<ul class="user-navigation-panel">
+  				<li><a class="user-nav-link" href="login.html">Вход</a></li>
+  				<li><a class="user-nav-link" href="signup.html">Регистрация</a></li>
   			</ul>
   		</div>
   		<nav class="main-navigation">
   			<ul class="site-navigation">
-  				<li><a href="#">Главная</a></li>
-  				<li><a href="#">Компания</a></li>
-  				<li><a href="#">Каталог</a></li>
-  				<li><a href="#">Новости</a></li>
-  				<li><a href="#">Спецпредложения</a></li>
-  				<li><a href="#">Доставка</a></li>
-  				<li><a href="#">Контакты</a></li>
+  				<li><a class="site-nav-link" href="index.html">Главная</a></li>
+  				<li><a class="site-nav-link" href="company.html">Компания</a></li>
+  				<li><a class="site-nav-link" href="catalog.html">Каталог</a></li>
+  				<li><a class="site-nav-link" href="news.html">Новости</a></li>
+  				<li><a class="site-nav-link" href="special-offer.html">Спецпредложения</a></li>
+  				<li><a class="site-nav-link" href="delivery.html">Доставка</a></li>
+  				<li><a class="site-nav-link" href="contacts.html">Контакты</a></li>
   			</ul>
   		</nav>
   	</header>
@@ -49,7 +47,6 @@
 
   		<section class="items-category">
   			<h1>Сайт магазна Техномарт</h1>
-  			<!-- Может на списках надо было, но я хз -->
   			<div>
   				<h2>Материалы</h2>
   				<a class="button" href="">На любой вкус</a>
@@ -80,27 +77,27 @@
   		
   		<section class="popular-items">
   			<h2>Популярные товары</h2>
-  			<a class="button" href="#">Все популярные товары</a>
+  			<a class="button" href="popular-items.html">Все популярные товары</a>
   			<div class="item-card">
-  				<img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+  				<img class="item-pic" src="/img/snippet-945.jpg" width="184" height="164" alt="Фото товара">
   				<h3>Перфоратор BOSCH BFG 9000</h3>
   				<p class="old-price"><del>32500 Р.</del></p>
   				<p class="new-price">25500 Р.</p>
   			</div>
   			<div class="item-card">
-  				<img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+  				<img class="item-pic" src="/img/snippet-945.jpg" width="184" height="164" alt="Фото товара">
   				<h3>Перфоратор BOSCH BFG 3000</h3>
   				<p class="old-price"><del>32500 Р.</del></p>
   				<p class="new-price">15500 Р.</p>
   			</div>
   			<div class="item-card">
-  				<img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+  				<img class="item-pic" src="/img/snippet-945.jpg" width="184" height="164" alt="Фото товара">
   				<h3>Перфоратор BOSCH BFG 6000</h3>
   				<p class="old-price"><del>32500 Р.</del></p>
   				<p class="new-price">25500 Р.</p>
   			</div>
   			<div class="item-card">
-  				<img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+  				<img class="item-pic" src="/img/snippet-945.jpg" width="184" height="164" alt="Фото товара">
   				<h3>Перфоратор BOSCH BFG 2000</h3>
   				<p class="old-price"><del>32500 Р.</del></p>
   				<p class="new-price">12500 Р.</p>
@@ -109,45 +106,45 @@
   		</section>
   		<section class="popular-brands">
   			<h2>Популярные производители</h2>
-  			<a class="button" href="#">Все производители</a>
+  			<a class="button" href="allbrands.html">Все производители</a>
   			<ul>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>
   				<li>
-  					<a href="#">
+  					<a class="logo-link" href="#">
   						<img src="#" width="220" height="145" alt="Логотип бренда">
   					</a>	
   				</li>	
