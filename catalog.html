@@ -51,16 +51,18 @@
         <ul class="breadcrumbs-list">
           <li>
             <a href="#">Каталог</a>
-            <li>
-              <a href="#">Инструмент</a>
+            <ul>
               <li>
-                <a href="#">Перфораторы</a>
+                <a href="#">Инструмент</a>
+                <ul>
+                  <li>
+                    <a href="#">Перфораторы</a>
+                  </li>
+                </ul>
               </li>
-            </li>
+            </ul>
           </li>
         </ul>
-        <!-- Валидатор ругается на вложенный список. А как правильно?
-        No “li” element in scope but a “li” end tag seen. -->
       </section>
       <section class="catalog-name">
         <h1>Перфораторы</h1>
@@ -70,7 +72,7 @@
         <h3>Цена:</h3>
         <!-- Как разметить фильтр по цене??? -->
         <h3>Производители:</h3>
-        <ul>
+        <ul class="filter-brands">
           <li>Bosh</li>
           <li>Интерскол</li>
           <li>Makita</li>
@@ -78,7 +80,7 @@
           <li>Hitachi</li>
         </ul>
         <h3>Питание:</h3>
-        <ul>
+        <ul class="filter-power">
           <li>Аккумуляторные</li>
           <li>Сетевые</li>
         </ul>
@@ -96,60 +98,66 @@
       <section class="items-list">
         <h2 class="visually-hidden">Выдача товаров</h2>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-32961.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-32961.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
         <div class="item-card">
-          <img class="item-pic" src="#" width="184" height="164" alt="Фото товара">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
-        <!-- Вот здесь еще пагинация? -->
+        <nav class="pagination">
+          <a class="pagination-button-active">1</a>
+          <a class="pagination-button" href="#2">2</a>
+          <a class="pagination-button" href="#3">3</a>
+          <a class="pagination-button" href="#4">4</a>
+          <a class="pagination-button-next" href="#next">Следующая</a>
+        </nav>
       </section>
       <section class="seo-text">
         <h2>Пара слов о перфораторах</h2>
@@ -164,22 +172,22 @@
         19/8 +7 (812) 555-05-55
       </p>
       <ul>
-        <li><a href="#">Компания</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a class="footer-nav-link" href="company.html">Компания</a></li>
+        <li><a class="footer-nav-link" href="catalog.html">Каталог</a></li>
+        <li><a class="footer-nav-link" href="news.html">Новости</a></li>
+        <li><a class="footer-nav-link" href="delivery.html">Доставка</a></li>
+        <li><a class="footer-nav-link" href="contacts.html">Контакты</a></li>
       </ul>
       <ul>
-        <li><a href="#">Материалы</a></li>
-        <li><a href="#">Техника</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li><a href="#">Спецпредложения</a></li>
+        <li><a class="footer-nav-link" href="materials.html">Материалы</a></li>
+        <li><a class="footer-nav-link" href="tech">Техника</a></li>
+        <li><a class="footer-nav-link" href="equipment.html">Инструмент</a></li>
+        <li><a class="footer-nav-link" href="special-offer.html">Спецпредложения</a></li>
       </ul>
     </footer>
     <footer class="info-footer">
       <p class="footer-copyright">
-        2010–2017 Компания Техномарт<br>
+        &copy 2010–2017 Компания Техномарт<br>
         Все права защищены
       </p>
       <div>
@@ -195,8 +203,8 @@
       </p>
       <p class="developed-by">
         <b>Разработано</b>
-        <a href="#">htmlacademy.ru</a>
+        <a href="https://htmlacademy.ru">htmlacademy.ru</a>
       </p>
-    </footer>
+      </footer>
   </body>
 </html>
