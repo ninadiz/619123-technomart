@@ -5,49 +5,54 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
-    <header class="main-header">
-      <div class="purchase-panel">
-        <a class="header-button-logo" href="index.html">ТЕХНОМАРТ</a>
-        <input type="header-search" name="Поиск">
-        <!-- В заметке задания в ЛК пишут, что надо использовать span для незнакомых интерактивных элементов. Подозреваю, что это тут. Как? -->
-        <ul class="purchase-panel-links">
-          <li><a class="purchase-panel-link" href="bookmarks.html">Закладки</a></li>
-          <li><a class="purchase-panel-link" href="basket.html">Корзина</a></li>
-          <li><a class="purchase-panel-link" href="purchase.html">Оформить заказ</a></li>
-        </ul>
-      </div>
-      <div class="info-panel">
-        <p class="info-panel-descriptor">
-          Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для ремонта
-        </p>
-        <a class="info-panel-contacts" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <p class="info-panel-address">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </p>
-        <ul class="user-navigation">
-          <li><a href="profile.html">Равшан Джамшутович</a></li>
-          <li><a href="logout.html">Выйти</a></li>
-          <li><a href="purchase-history.html">Мои заказы</a></li>
-          <li><a href="account.html">Личный кабинет</a></li>
-        </ul>
-      </div>
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li><a class="site-nav-link" href="index.html">Главная</a></li>
-          <li><a class="site-nav-link" href="company.html">Компания</a></li>
-          <li><a class="site-nav-link" href="catalog.html">Каталог</a></li>
-          <li><a class="site-nav-link" href="news.html">Новости</a></li>
-          <li><a class="site-nav-link" href="special-offer.html">Спецпредложения</a></li>
-          <li><a class="site-nav-link" href="delivery.html">Доставка</a></li>
-          <li><a class="site-nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
+  	<header class="main-header">
+  		<div class="purchase-panel">
+  			<!-- Как сделать скип к контенту? -->
+  			<a class="header-button-logo" href="index.html" area-label="Вернуться на главную станицу">ТЕХНОМАРТ</a>
+  			<!-- Как тут быть с лейблом, чтобы было понятно, что это лого -->
+  			<form class="header-search">
+  				<label for="search" class="visually-hidden">Поиск по сайту</label>
+  				<input id="search" type="search" name="Поиск" placeholder="Поиск">
+  			</form>
+  			<!-- Форма поиска -->
+  			<ul class="purchase-panel-links">
+  				<li><a class="purchase-panel-link" href="bookmarks.html">Закладки</a></li>
+  				<li><a class="purchase-panel-link" href="basket.html">Корзина</a></li>
+  				<li><a class="purchase-panel-link" href="purchase.html">Оформить заказ</a></li>
+  			</ul>
+  		</div>
+  		<div class="info-panel">
+  			<p class="info-panel-descriptor">
+  				Интернет-магазин<br>
+  				строительных материалов<br>
+  				и инструментов для ремонта
+  			</p>
+  			<a class="info-panel-contacts" href="tel:+78125550555" area-label="Позвоните нам по телефону">+7 (812) 555-05-55</a>
+  			<p class="info-panel-address" area-label="Наш адрес">
+  				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+  			</p>
+  			<ul class="user-navigation">
+  				<li><a href="profile.html">Равшан Джамшутович</a></li>
+  				<li><a href="logout.html">Выйти</a></li>
+  				<li><a href="purchase-history.html">Мои заказы</a></li>
+  				<li><a href="account.html">Личный кабинет</a></li>
+  			</ul>
+  		</div>
+  		<nav class="main-navigation" area-label="Навигация по сайту">
+  			<ul class="site-navigation">
+  				<li><a class="site-nav-link-disabled" href="index.html">Главная</a></li>
+  				<li><a class="site-nav-link" href="company.html">Компания</a></li>
+  				<li><a class="site-nav-link" href="catalog.html">Каталог</a></li>
+  				<li><a class="site-nav-link" href="news.html">Новости</a></li>
+  				<li><a class="site-nav-link" href="special-offer.html">Спецпредложения</a></li>
+  				<li><a class="site-nav-link" href="delivery.html">Доставка</a></li>
+  				<li><a class="site-nav-link" href="contacts.html">Контакты</a></li>
+  			</ul>
+  		</nav>
   	</header>
   	<main class="container">
       <section class="breadcrumbs">
-        <h1 class="visually-hidden">Хлебные крошки</h1>
+        <p class="visually-hidden">Хлебные крошки</p>
         <ul class="breadcrumbs-list">
           <li>
             <a href="#">Каталог</a>
@@ -68,35 +73,127 @@
         <h1>Перфораторы</h1>
       </section>
       <section class="filter">
-        <h2>Фильтр:</h2>
-        <h3>Цена:</h3>
-        <!-- Как разметить фильтр по цене??? -->
-        <h3>Производители:</h3>
-        <ul class="filter-brands">
-          <li>Bosh</li>
-          <li>Интерскол</li>
-          <li>Makita</li>
-          <li>DeWalt</li>
-          <li>Hitachi</li>
-        </ul>
-        <h3>Питание:</h3>
-        <ul class="filter-power">
-          <li>Аккумуляторные</li>
-          <li>Сетевые</li>
-        </ul>
-        <span class="button-show-all">Показать все</span>
+      	<h2>Фильтр:</h2>
+        <form class="filter" method="get" action="#">
+        	<fieldset>
+        		<legend>Цена:</legend>
+        		<label for="filter-price" class="visually-hidden">Диапазон цен</label>
+        		<input id="filter-price" type="range" name="price">
+
+        		<label for="filter-price-from" class="visually-hidden">Минимальная цена</label>
+        		<input id="filter-price-from" type="number" name="price-from">
+
+        		<label for="filter-price-to" class="visually-hidden">Максимальная цена</label>
+        		<input id="filter-price-to" type="number" name="price-to">
+        	</fieldset>
+        	<fieldset>
+        		<legend>Производители:</legend>
+        		<ul class="filter-brands">
+        			<li>
+        	        	<label for="filter-bosh" class="visually-hidden">Bosh</label>
+        	        	<input id="filter-bosh" type="checkbox" name="Bosh">
+        	        	Bosh
+        	        </li>
+        	        <li>
+        	        	<label for="filter-interskol" class="visually-hidden">Интерскол</label>
+        	        	<input id="filter-interskol" type="checkbox" name="Interskol">
+        	        	Интерскол
+        	        </li>
+        	        <li>
+        	        	<label for="filter-makita" class="visually-hidden">Makita</label>
+        	        	<input id="filter-makita" type="checkbox" name="Makita">
+        	        	Makita
+        	        </li>
+        	        <li>
+        	        	<label for="filter-deWalt" class="visually-hidden">DeWalt</label>
+        	        	<input id="filter-deWalt" type="checkbox" name="DeWalt">
+        	        	DeWalt
+        	        </li>
+        	        <li>
+        	        	<label for="filter-hitachi" class="visually-hidden">Hitachi</label>
+        	        	<input id="filter-hitachi" type="checkbox" name="Hitachi">
+        	        	Hitachi
+        	        </li>
+        	    </ul>
+        	</fieldset>
+        	<fieldset>
+        	    <legend>Питание:</legend>
+        	    <ul class="filter-supply">
+        	    	<li>
+        	    		<label for="filter-battery" class="visually-hidden">Аккумуляторные</label>
+        	    		<input id="filter-battery" type="radio" name="battery">
+        	    		Аккумуляторные
+        	    	</li>
+        	    	<li>
+        	    		<label for="filter-mains-supply" class="visually-hidden">Сетевые</label>
+        	    		<input id="filter-mains-supply" type="radio" name="mains supply">
+        	    		Сетевые
+        	    	</li>
+        	    </ul>
+        	</fieldset>
+        	<button type="" class="filter-show-result">Показать</button>
+        	<button type="" class="filter-reset">Сбросить фильтр</button>
+        	<!-- Что делать с этими кнопками? -->
+        </form>
       </section>
       <section class="sort">
         <h2>Сортировка</h2>
         <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По функционалу</li>
-          <!-- Как разметить сортировку? -->
+        	<li class="sort-link-active">
+        		По цене
+        	</li>
+        	<li class="sort-link">
+        		По типу
+        	</li>
+        	<li class="sort-link">
+        		По функционалу
+        	</li>
+        	<!-- Сортировка это форма? Ссылки или кнопки?! По сути же кнопки, мы же не уходим на другую страницу... Но с другой стороны - меняется урл обычно... -->
         </ul>
       </section>
+      <section class="modal">
+      	<!-- Как внедрить в разметку попап? -->
+      	<div>
+      		<p>Товар добавлен в корзину</p>
+      		<button class="modal-close" type="button" area-label="Закрыть окно"></button>
+      		<a href="">Оформить заказ</a>
+      		<a href="">Продолжить покупки</a>
+      	<!-- Что должно быть в href? ы-->
+      	</div>
+      </section>
       <section class="items-list">
-        <h2 class="visually-hidden">Выдача товаров</h2>
+        <h2 class="visually-hidden">Товары в категории перфораторы</h2>
+        <div class="item-card">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
+          <h3>Перфоратор BOSCH BFG 9000</h3>
+          <p class="old-price"><del>32500 Р.</del></p>
+          <p class="new-price">25500 Р.</p>
+        </div>
+        <div class="item-card">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
+          <h3>Перфоратор BOSCH BFG 9000</h3>
+          <p class="old-price"><del>32500 Р.</del></p>
+          <p class="new-price">25500 Р.</p>
+        </div>
+        <div class="item-card-hover">
+          <img class="item-pic" src="img/snippet-32961.jpg" width="200" height="160" alt="Фото товара">
+          <h3>Перфоратор BOSCH BFG 9000</h3>
+          <p class="old-price"><del>32500 Р.</del></p>
+          <p class="new-price">25500 Р.</p>
+          <!-- Если это при ховере, то как же доступность? -->
+        </div>
+        <div class="item-card">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
+          <h3>Перфоратор BOSCH BFG 9000</h3>
+          <p class="old-price"><del>32500 Р.</del></p>
+          <p class="new-price">25500 Р.</p>
+        </div>
+        <div class="item-card">
+          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
+          <h3>Перфоратор BOSCH BFG 9000</h3>
+          <p class="old-price"><del>32500 Р.</del></p>
+          <p class="new-price">25500 Р.</p>
+        </div>
         <div class="item-card">
           <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
           <h3>Перфоратор BOSCH BFG 9000</h3>
@@ -121,42 +218,17 @@
           <p class="old-price"><del>32500 Р.</del></p>
           <p class="new-price">25500 Р.</p>
         </div>
-        <div class="item-card">
-          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
-          <h3>Перфоратор BOSCH BFG 9000</h3>
-          <p class="old-price"><del>32500 Р.</del></p>
-          <p class="new-price">25500 Р.</p>
-        </div>
-        <div class="item-card">
-          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
-          <h3>Перфоратор BOSCH BFG 9000</h3>
-          <p class="old-price"><del>32500 Р.</del></p>
-          <p class="new-price">25500 Р.</p>
-        </div>
-        <div class="item-card">
-          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
-          <h3>Перфоратор BOSCH BFG 9000</h3>
-          <p class="old-price"><del>32500 Р.</del></p>
-          <p class="new-price">25500 Р.</p>
-        </div>
-        <div class="item-card">
-          <img class="item-pic" src="img/snippet-32961.jpg" width="200" height="160" alt="Фото товара">
-          <h3>Перфоратор BOSCH BFG 9000</h3>
-          <p class="old-price"><del>32500 Р.</del></p>
-          <p class="new-price">25500 Р.</p>
-        </div>
-        <div class="item-card">
-          <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
-          <h3>Перфоратор BOSCH BFG 9000</h3>
-          <p class="old-price"><del>32500 Р.</del></p>
-          <p class="new-price">25500 Р.</p>
-        </div>
-        <nav class="pagination">
-          <a class="pagination-button-active">1</a>
-          <a class="pagination-button" href="#2">2</a>
-          <a class="pagination-button" href="#3">3</a>
-          <a class="pagination-button" href="#4">4</a>
-          <a class="pagination-button-next" href="#next">Следующая</a>
+        <!-- Как сделать доступную пагинацию? -->
+        <nav class="pagination" aria-label="pagination navigation">
+        	<p>Переход к следующим страницам категории перфораторы</p>
+        	<!-- Можно ли в ареа-лейбл писать по русски? -->
+          <a class="pagination-button-active" aria-label="current page, page 3">1</a>
+          <a class="pagination-button" aria-label="goto page 2" href="#2">2</a>
+          <a class="pagination-button" aria-label="goto page 3" href="#3">3</a>
+          <a class="pagination-button" aria-label="goto page 4" href="#4">4</a>
+          <a class="pagination-button-next" aria-label="goto next page" href="#next">Следующая</a>
+          <!-- Это же переключит на 2 страницу по сути? -->
+          <!-- Может это все же кнопки? -->
         </nav>
       </section>
       <section class="seo-text">
@@ -166,45 +238,49 @@
         </p>
       </section>
   	</main>
-    <footer class="main-footer">
-      <a class="footer-button-logo">ТЕХНОМАРТ</a>
-      <p> г. Санкт-Петербург, ул. Б. Конюшенная, д.<br>
+  	  	<footer class="main-footer">
+  		<label>
+  			<a class="footer-button-logo">ТЕХНОМАРТ</a>
+  			Логотип Техномарта
+  		</label>
+  		<p> г. Санкт-Петербург, ул. Б. Конюшенная, д.<br>
         19/8 +7 (812) 555-05-55
-      </p>
-      <ul>
-        <li><a class="footer-nav-link" href="company.html">Компания</a></li>
-        <li><a class="footer-nav-link" href="catalog.html">Каталог</a></li>
-        <li><a class="footer-nav-link" href="news.html">Новости</a></li>
-        <li><a class="footer-nav-link" href="delivery.html">Доставка</a></li>
-        <li><a class="footer-nav-link" href="contacts.html">Контакты</a></li>
-      </ul>
-      <ul>
-        <li><a class="footer-nav-link" href="materials.html">Материалы</a></li>
-        <li><a class="footer-nav-link" href="tech">Техника</a></li>
-        <li><a class="footer-nav-link" href="equipment.html">Инструмент</a></li>
-        <li><a class="footer-nav-link" href="special-offer.html">Спецпредложения</a></li>
-      </ul>
-    </footer>
-    <footer class="info-footer">
-      <p class="footer-copyright">
-        &copy 2010–2017 Компания Техномарт<br>
-        Все права защищены
-      </p>
-      <div>
-        <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграмм</a></li>
-        </ul>
-      </div>
-      <p class="email-feedback">
-        <b>Обратная связь</b>
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </p>
-      <p class="developed-by">
-        <b>Разработано</b>
-        <a href="https://htmlacademy.ru">htmlacademy.ru</a>
-      </p>
-      </footer>
+  		</p>
+  		<ul>
+  			<li><a class="footer-nav-link" href="company.html">Компания</a></li>
+  			<li><a class="footer-nav-link" href="catalog.html">Каталог</a></li>
+  			<li><a class="footer-nav-link" href="news.html">Новости</a></li>
+  			<li><a class="footer-nav-link" href="delivery.html">Доставка</a></li>
+  			<li><a class="footer-nav-link" href="contacts.html">Контакты</a></li>
+  		</ul>
+  		<ul>
+  			<li><a class="footer-nav-link" href="materials.html">Материалы</a></li>
+  			<li><a class="footer-nav-link" href="tech">Техника</a></li>
+  			<li><a class="footer-nav-link" href="equipment.html">Инструмент</a></li>
+  			<li><a class="footer-nav-link" href="special-offer.html">Спецпредложения</a></li>
+  		</ul>
+  	</footer>
+  	<footer class="info-footer">
+  		<p class="footer-copyright">
+  			&copy 2010–2017 Компания Техномарт<br>
+  			Все права защищены
+  		</p>
+  		<div>
+  			<b class="visually-hidden">Присоединяйтесь к нам в социальных сетях</b>
+  			<ul>
+    			<li><a class="social-button" href="#" area-label="Вконтакте"></a></li>
+    			<li><a class="social-button" href="#" area-label="Фейсбук"></a></li>
+    			<li><a class="social-button" href="#" area-label="Инстаграмм"></a></li>
+    		</ul>
+  		</div>
+  		<p class="email-feedback">
+  			<b>Обратная связь</b>
+  			<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+  		</p>
+  		<p class="developed-by">
+  			<b>Разработано</b>
+  			<a href="https://htmlacademy.ru">htmlacademy.ru</a>
+  		</p>
+  		</footer>
   </body>
 </html>

@@ -7,9 +7,14 @@
   <body>
   	<header class="main-header">
   		<div class="purchase-panel">
-  			<a class="header-button-logo">ТЕХНОМАРТ</a>
-  			<input type="header-search" name="Поиск">
-  			<!-- В заметке задания в ЛК пишут, что надо использовать span для незнакомых интерактивных элементов. Подозреваю, что это тут. Как? -->
+  			<!-- Как сделать скип к контенту? -->
+  			<a class="header-button-logo" area-label="Логотип Техномарт">ТЕХНОМАРТ</a>
+  			<!-- Как тут быть с лейблом, чтобы было понятно, что это лого -->
+  			<form class="header-search">
+  				<label for="search" class="visually-hidden">Поиск по сайту</label>
+  				<input id="search" type="search" name="Поиск" placeholder="Поиск">
+  			</form>
+  			<!-- Форма поиска -->
   			<ul class="purchase-panel-links">
   				<li><a class="purchase-panel-link" href="bookmarks.html">Закладки</a></li>
   				<li><a class="purchase-panel-link" href="basket.html">Корзина</a></li>
@@ -22,8 +27,8 @@
   				строительных материалов<br>
   				и инструментов для ремонта
   			</p>
-  			<a class="info-panel-contacts" href="tel:+78125550555">+7 (812) 555-05-55</a>
-  			<p class="info-panel-address">
+  			<a class="info-panel-contacts" href="tel:+78125550555" area-label="Позвоните нам по телефону">+7 (812) 555-05-55</a>
+  			<p class="info-panel-address" area-label="Наш адрес">
   				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
   			</p>
   			<ul class="user-navigation-panel">
@@ -31,7 +36,7 @@
   				<li><a class="user-nav-link" href="signup.html">Регистрация</a></li>
   			</ul>
   		</div>
-  		<nav class="main-navigation">
+  		<nav class="main-navigation" area-label="Навигация по сайту">
   			<ul class="site-navigation">
   				<li><a class="site-nav-link-disabled" href="index.html">Главная</a></li>
   				<li><a class="site-nav-link" href="company.html">Компания</a></li>
@@ -44,37 +49,35 @@
   		</nav>
   	</header>
   	<main class="container">
-
   		<section class="items-category">
-  			<h1>Сайт магазна Техномарт</h1>
+  			<h1 class="visually-hidden">Сайт магазина Техномарт</h1>
   			<div>
   				<h2>Материалы</h2>
-  				<a class="button" href="">На любой вкус</a>
+  				<a class="button" href="" area-label="Открыть каталог материалов">На любой вкус</a>
   			</div>
   			<div>
   				<h2>Инструмент</h2>
-  				<a class="button" href="">На все случаи</a>
+  				<a class="button" href="" area-label="Открыть каталог инструментов">На все случаи</a>
   			</div>
   			<div>
   				<h2>Техника</h2>
-  				<a class="button" href="">Для стройки</a>
+  				<a class="button" href="" area-label="Открыть каталог техники">Для стройки</a>
   			</div>
   			<div>
   				<h2>Дрели</h2>
   				<p>Соседям на радость</p>
-  				<a class="button" href="">Для стройки</a>
+  				<a class="button" href="" area-label="Открыть каталог дрелей">Открыть каталог</a>
   				<!-- Как слайдер влияет на разметку? -->
   			</div>
   			<div>
   				<h2>Скидки 50%</h2>
-  				<a class="button" href="">На 350 товаров</a>
+  				<a class="button" href="" area-label="Открыть страницу товаров со скидками">На 350 товаров</a>
   			</div>
   			<div>
   				<h2>Доставка</h2>
-  				<a class="button" href="">Бесплатно</a>
+  				<a class="button" href="" area-label="Условия доставки">Бесплатно</a>
   			</div>
   		</section>
-  		
   		<section class="popular-items">
   			<h2>Популярные товары</h2>
   			<a class="button" href="popular-items.html">Все популярные товары</a>
@@ -153,7 +156,7 @@
   		<section class="services">
   			<h2>Сервисы</h2>
   			<p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-  			<div class="tabs">
+  			<div class="tabs" area-label="Наши сервисы">
   				<ul class="tabs-caption">
   					<li class="active">Доставка</li>
   					<li>Гарантия</li>
@@ -193,16 +196,19 @@
   		</section>
     </main>
   	<footer class="main-footer">
-  		<a class="footer-button-logo">ТЕХНОМАРТ</a>
+  		<label>
+  			<a class="footer-button-logo" href="index.html">ТЕХНОМАРТ</a>
+  			Вернуться на главную страницу
+  		</label>
   		<p> г. Санкт-Петербург, ул. Б. Конюшенная, д.<br>
         19/8 +7 (812) 555-05-55
   		</p>
   		<ul>
-        <li><a class="footer-nav-link" href="company.html">Компания</a></li>
-        <li><a class="footer-nav-link" href="catalog.html">Каталог</a></li>
-        <li><a class="footer-nav-link" href="news.html">Новости</a></li>
-        <li><a class="footer-nav-link" href="delivery.html">Доставка</a></li>
-        <li><a class="footer-nav-link" href="contacts.html">Контакты</a></li>
+  			<li><a class="footer-nav-link" href="company.html">Компания</a></li>
+  			<li><a class="footer-nav-link" href="catalog.html">Каталог</a></li>
+  			<li><a class="footer-nav-link" href="news.html">Новости</a></li>
+  			<li><a class="footer-nav-link" href="delivery.html">Доставка</a></li>
+  			<li><a class="footer-nav-link" href="contacts.html">Контакты</a></li>
   		</ul>
   		<ul>
   			<li><a class="footer-nav-link" href="materials.html">Материалы</a></li>
@@ -217,10 +223,11 @@
   			Все права защищены
   		</p>
   		<div>
+  			<b class="visually-hidden">Присоединяйтесь к нам в социальных сетях</b>
   			<ul>
-    			<li><a class="social-button" href="#">Вконтакте</a></li>
-    			<li><a class="social-button" href="#">Фейсбук</a></li>
-    			<li><a class="social-button" href="#">Инстаграмм</a></li>
+    			<li><a class="social-button" href="#" area-label="Вконтакте"></a></li>
+    			<li><a class="social-button" href="#" area-label="Фейсбук"></a></li>
+    			<li><a class="social-button" href="#" area-label="Инстаграмм"></a></li>
     		</ul>
   		</div>
   		<p class="email-feedback">
