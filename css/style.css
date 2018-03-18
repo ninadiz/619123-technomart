@@ -25,12 +25,38 @@ a {
 	background-color: #293449;
 
 }
+.info-panel-descriptor {
+	font-family: Cuprum-Italic, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 23px;
+	color: #ee3643;
+}
+ 
+.info-panel-contacts {
+	font-size: 21px;
+	line-height: 21px;
+	text-align: center;
+/* Пачиму не работает center??? */
+	color: #ee3643;
+}
+
+.info-panel-address {
+	font-size: 14px;
+	text-align: center;
+
+}
+
+.user-navigation a {
+	font-size: 21px;
+	line-height: 21px;
+	color: #000000;
+}
+
+/* Вот здесь еще один фокус */
 
 .purchase-navigation,
 .user-navigation,
-.site-navigation,
-.footer-navigation-list-1,
-.footer-navigation-list-2, {
+.site-navigation {
 	list-style: none;
 }
 /* Пачиму не работает когда все классы списков в группе выше??? */
