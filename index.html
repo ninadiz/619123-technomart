@@ -3,23 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" type="text/css" href="css/normallise.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-  	<header class="main-header">
-  		<div class="purchase-panel">
-  			<!-- Как сделать скип к контенту? -->
-  			<a class="header-button-logo" aria-label="Логотип Техномарт">ТЕХНОМАРТ</a>
-  			<!-- Как тут быть с лейблом, чтобы было понятно, что это лого -->
-  			<form class="header-search">
-  				<label for="search" class="visually-hidden">Поиск по сайту</label>
-  				<input id="search" type="search" name="Поиск" placeholder="Поиск">
-  			</form>
-  			<!-- Форма поиска -->
-  			<ul class="purchase-panel-links">
-  				<li><a class="purchase-panel-link" href="bookmarks.html">Закладки</a></li>
-  				<li><a class="purchase-panel-link" href="basket.html">Корзина</a></li>
-  				<li><a class="purchase-panel-link" href="purchase.html">Оформить заказ</a></li>
-  			</ul>
+    <header class="main-header">
+      <div class="purchase-navigation">
+        <a class="header-button-logo" aria-label="Вернуться на главную станицу">ТЕХНОМАРТ</a>
+        <form class="header-search">
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
+          <input id="search" type="search" name="Поиск" placeholder="Поиск">
+        </form>
+        <!-- Форма поиска -->
+        <ul class="purchase-navigation">
+          <li><a href="bookmarks.html">Закладки</a></li>
+          <li><a href="basket.html">Корзина</a></li>
+          <li><a href="purchase.html">Оформить заказ</a></li>
+        </ul>
   		</div>
   		<div class="info-panel">
   			<p class="info-panel-descriptor">
@@ -31,56 +33,56 @@
   			<p class="info-panel-address" aria-label="Наш адрес">
   				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
   			</p>
-  			<ul class="user-navigation-panel">
+  			<ul class="user-navigation">
   				<li><a class="user-nav-link" href="login.html">Вход</a></li>
   				<li><a class="user-nav-link" href="signup.html">Регистрация</a></li>
   			</ul>
   		</div>
   		<nav class="main-navigation" aria-label="Навигация по сайту">
   			<ul class="site-navigation">
-  				<li><a class="site-nav-link-disabled" href="index.html">Главная</a></li>
-  				<li><a class="site-nav-link" href="company.html">Компания</a></li>
-  				<li><a class="site-nav-link" href="catalog.html">Каталог</a></li>
-  				<li><a class="site-nav-link" href="news.html">Новости</a></li>
-  				<li><a class="site-nav-link" href="special-offer.html">Спецпредложения</a></li>
-  				<li><a class="site-nav-link" href="delivery.html">Доставка</a></li>
-  				<li><a class="site-nav-link" href="contacts.html">Контакты</a></li>
+  				<li><a class="site-nav-current" href="index.html">Главная</a></li>
+  				<li><a href="company.html">Компания</a></li>
+  				<li><a href="catalog.html">Каталог</a></li>
+  				<li><a href="news.html">Новости</a></li>
+  				<li><a href="special-offer.html">Спецпредложения</a></li>
+  				<li><a href="delivery.html">Доставка</a></li>
+  				<li><a href="contacts.html">Контакты</a></li>
   			</ul>
   		</nav>
   	</header>
   	<main class="container">
   		<section class="items-category">
   			<h1 class="visually-hidden">Сайт магазина Техномарт</h1>
-  			<div>
-  				<h2>Материалы</h2>
-  				<a class="button" href="" aria-label="Открыть каталог материалов">На любой вкус</a>
+  			<div class="items-category-materials">
+  				<p>Материалы</p>
+  				<a class="items-category-button" href="" aria-label="Открыть каталог материалов">На любой вкус</a>
   			</div>
-  			<div>
-  				<h2>Инструмент</h2>
+  			<div class="items-category-tools">
+  				<p>Инструмент</p>
   				<a class="button" href="" aria-label="Открыть каталог инструментов">На все случаи</a>
   			</div>
-  			<div>
-  				<h2>Техника</h2>
-  				<a class="button" href="" aria-label="Открыть каталог техники">Для стройки</a>
+  			<div class="items-category-equipment">
+  				<p>Техника</p>
+  				<a class="items-category-button" href="" aria-label="Открыть каталог техники">Для стройки</a>
   			</div>
-  			<div>
-  				<h2>Дрели</h2>
-  				<p>Соседям на радость</p>
+  			<div class="items-category-slider">
+  				<p class="slider-header">Дрели</p>
+  				<p class="slider-description">Соседям на радость</p>
   				<a class="button" href="" aria-label="Открыть каталог дрелей">Открыть каталог</a>
   				<!-- Как слайдер влияет на разметку? -->
   			</div>
-  			<div>
-  				<h2>Скидки 50%</h2>
-  				<a class="button" href="" aria-label="Открыть страницу товаров со скидками">На 350 товаров</a>
+  			<div class="items-category-sale">
+  				<p>Скидки 50%</p>
+  				<a class="items-category-button" href="" aria-label="Открыть страницу товаров со скидками">На 350 товаров</a>
   			</div>
-  			<div>
-  				<h2>Доставка</h2>
-  				<a class="button" href="" aria-label="Условия доставки">Бесплатно</a>
+  			<div class="items-category-delivery">
+  				<p>Доставка</p>
+  				<a class="items-category-button" href="" aria-label="Условия доставки">Бесплатно</a>
   			</div>
   		</section>
   		<section class="popular-items">
-  			<h2>Популярные товары</h2>
-  			<a class="button" href="popular-items.html">Все популярные товары</a>
+          <h2>Популярные товары</h2>
+          <a class="button" href="popular-items.html">Все популярные товары</a>
   			<div class="item-card">
   				<img class="item-pic" src="img/snippet-945.jpg" width="200" height="160" alt="Фото товара">
   				<h3>Перфоратор BOSCH BFG 9000</h3>
@@ -108,8 +110,8 @@
   			</div>
   		</section>
   		<section class="popular-brands">
-  			<h2>Популярные производители</h2>
-  			<a class="button" href="allbrands.html">Все производители</a>
+          <h2>Популярные производители</h2>
+          <a class="button" href="allbrands.html">Все производители</a>
   			<ul class="popular-brands-list">
   				<li>
   					<a class="logo-link" href="catalog-metabo.html">
@@ -157,7 +159,7 @@
   			<h2>Сервисы</h2>
   			<p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
   			<div class="tabs" aria-label="Наши сервисы">
-  				<ul class="tabs-caption">
+  				<ul class="tabs-list">
   					<li class="active">Доставка</li>
   					<li>Гарантия</li>
   					<li>Кредит</li>
@@ -180,7 +182,7 @@
   			<h2>Компания Техномарт</h2>
   			<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
   			<p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
-  			<ul>
+  			<ul class="info-company-list">
   				<li>Деловые линии</li>
   				<li>Автотрейдинг</li>
   				<li>ЖелДорЭкспедиция</li>
@@ -203,14 +205,14 @@
   		<p> г. Санкт-Петербург, ул. Б. Конюшенная, д.<br>
         19/8 +7 (812) 555-05-55
   		</p>
-  		<ul>
+  		<ul class="footer-navigation-list-1">
   			<li><a class="footer-nav-link" href="company.html">Компания</a></li>
   			<li><a class="footer-nav-link" href="catalog.html">Каталог</a></li>
   			<li><a class="footer-nav-link" href="news.html">Новости</a></li>
   			<li><a class="footer-nav-link" href="delivery.html">Доставка</a></li>
   			<li><a class="footer-nav-link" href="contacts.html">Контакты</a></li>
   		</ul>
-  		<ul>
+  		<ul class="footer-navigation-list-2">
   			<li><a class="footer-nav-link" href="materials.html">Материалы</a></li>
   			<li><a class="footer-nav-link" href="tech">Техника</a></li>
   			<li><a class="footer-nav-link" href="equipment.html">Инструмент</a></li>
@@ -225,9 +227,9 @@
   		<div>
   			<b class="visually-hidden">Присоединяйтесь к нам в социальных сетях</b>
   			<ul>
-    			<li><a class="social-button" href="#" aria-label="Вконтакте"></a></li>
-    			<li><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
-    			<li><a class="social-button" href="#" aria-label="Инстаграмм"></a></li>
+    			<li><a class="social-button" href="#" aria-label="Вконтакте">Вконтакте</a></li>
+    			<li><a class="social-button" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+    			<li><a class="social-button" href="#" aria-label="Инстаграм">Инстаграм</a></li>
     		</ul>
   		</div>
   		<p class="email-feedback">

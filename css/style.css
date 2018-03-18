@@ -1,0 +1,150 @@
+body {
+	margin: 0;
+	padding: 0;
+	/* Это задано только для тега body и не наследуется остальным тегам */
+
+	font-family: Cuprum, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: 400;
+	color: black;
+	text-transform: none;
+
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+.purchase-navigation,
+.main-navigation {
+	font-size: 17px;
+	line-height: 18px;
+
+	background-color: #293449;
+
+}
+
+.purchase-navigation,
+.user-navigation,
+.site-navigation,
+.footer-navigation-list-1,
+.footer-navigation-list-2, {
+	list-style: none;
+}
+/* Пачиму не работает когда все классы списков в группе выше??? */
+.popular-brands-list {
+	list-style: none;
+}
+
+.tabs-list {
+	list-style: none;
+}
+
+/* А вот здесь есть стилизация списка! */
+.info-company-list {
+	list-style: none;
+}
+
+.purchase-navigation a,
+.site-navigation a {
+	color: #ffffff;
+}
+
+.purchase-navigation a:hover,
+.purchase-navigation a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus {
+	color: #293449;
+}
+
+.items-category div {
+	background-color: #ffbf47;
+}
+
+.items-category p {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+
+	color: #ffffff;
+}
+
+.items-category a {
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #ffffff;
+}
+
+/* Пачиму не работает для слайдера???
+.items-category-slider {
+	background-image: url(img/1-slider.jpg);
+}
+
+.slider-header {
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.slider-description {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+*/
+
+h2 {
+	font-size: 30px;
+	line-height: 30px;
+
+	color: #32425c;
+}
+
+a.button {
+	color: #ffffff;
+	background-color: #ee3643;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+}
+
+/* Откуда в браузере взялось зачеркивание и засечки??? */
+.old-price {
+	font-family: PTSans;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 700;
+	text-align: center;
+
+	color: #a9a9a9;
+}
+
+.new-price {
+	font-family: PTSans;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 700;
+	text-align: center;
+
+	color: #ffffff;
+
+	background-color: #ee3643;
+}
+
+.services h2,
+.info-company h2,
+.contacts h2 {
+	color: #000000;
+}
+
+.services h3 {
+	font-size: 36px;
+	line-height: 36px;
+
+	color: #32425c;
+}

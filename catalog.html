@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" type="text/css" href="css/normallise.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
   	<header class="main-header">
-  		<div class="purchase-panel">
-  			<!-- Как сделать скип к контенту? -->
-  			<a class="header-button-logo" href="index.html" aria-label="Вернуться на главную станицу">ТЕХНОМАРТ</a>
-  			<!-- Как тут быть с лейблом, чтобы было понятно, что это лого -->
+  		<div class="purchase-navigation">
+        <a class="header-button-logo" href="index.html" aria-label="Вернуться на главную станицу">ТЕХНОМАРТ</a>
   			<form class="header-search">
   				<label for="search" class="visually-hidden">Поиск по сайту</label>
   				<input id="search" type="search" name="Поиск" placeholder="Поиск">
   			</form>
   			<!-- Форма поиска -->
-  			<ul class="purchase-panel-links">
-  				<li><a class="purchase-panel-link" href="bookmarks.html">Закладки</a></li>
-  				<li><a class="purchase-panel-link" href="basket.html">Корзина</a></li>
-  				<li><a class="purchase-panel-link" href="purchase.html">Оформить заказ</a></li>
+  			<ul class="purchase-navigation">
+  				<li><a href="bookmarks.html">Закладки</a></li>
+  				<li><a href="basket.html">Корзина</a></li>
+  				<li><a href="purchase.html">Оформить заказ</a></li>
   			</ul>
   		</div>
   		<div class="info-panel">
@@ -40,13 +42,13 @@
   		</div>
   		<nav class="main-navigation" aria-label="Навигация по сайту">
   			<ul class="site-navigation">
-  				<li><a class="site-nav-link-disabled" href="index.html">Главная</a></li>
-  				<li><a class="site-nav-link" href="company.html">Компания</a></li>
-  				<li><a class="site-nav-link" href="catalog.html">Каталог</a></li>
-  				<li><a class="site-nav-link" href="news.html">Новости</a></li>
-  				<li><a class="site-nav-link" href="special-offer.html">Спецпредложения</a></li>
-  				<li><a class="site-nav-link" href="delivery.html">Доставка</a></li>
-  				<li><a class="site-nav-link" href="contacts.html">Контакты</a></li>
+  				<li><a href="index.html">Главная</a></li>
+  				<li><a class="site-nav-current" href="company.html">Компания</a></li>
+  				<li><a href="catalog.html">Каталог</a></li>
+  				<li><a href="news.html">Новости</a></li>
+  				<li><a href="special-offer.html">Спецпредложения</a></li>
+  				<li><a href="delivery.html">Доставка</a></li>
+  				<li><a href="contacts.html">Контакты</a></li>
   			</ul>
   		</nav>
   	</header>
@@ -136,19 +138,27 @@
         	<!-- Что делать с этими кнопками? -->
         </form>
       </section>
+<!-- Сортировка -->
       <section class="sort">
         <h2>Сортировка</h2>
         <ul>
         	<li class="sort-link-active">
-        		По цене
+        		<a href="">По цене</a>
         	</li>
         	<li class="sort-link">
-        		По типу
+        		<a href="">По типу</a>
         	</li>
         	<li class="sort-link">
-        		По функционалу
+        		<a href="">По функционалу</a>
         	</li>
-        	<!-- Сортировка это форма? Ссылки или кнопки?! По сути же кнопки, мы же не уходим на другую страницу... Но с другой стороны - меняется урл обычно... -->
+          <ul>
+            <li class="sort-up-active">
+            <a href="" aria-label="Сортировка по возрастанию"></a>
+          </li>
+          <li class="sort-down">
+            <a href="" aria-label="Сортировка по убыванию"></a>
+          </li>
+          </ul>
         </ul>
       </section>
       <section class="modal">
