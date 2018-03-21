@@ -2,48 +2,136 @@ body {
 	margin: 0;
 	padding: 0;
 	/* Это задано только для тега body и не наследуется остальным тегам */
-
 	font-family: Cuprum, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: 400;
 	color: black;
 	text-transform: none;
-
 	background-color: white;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 30px;
+	color: #32425c;
 }
 
 a {
 	text-decoration: none;
 }
 
-.purchase-navigation,
-.main-navigation {
-	font-size: 17px;
-	line-height: 18px;
-
-	background-color: #293449;
+header {
+	width: auto;
+	height: auto;
+	background-color: #f3f7f9;
+	padding-bottom: 60px;
 
 }
+
+/* Общие селекторы */
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.list {
+	list-style: none;
+}
+
+.container {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Пошла стилиация элементов */
+
+.purchase-navigation-panel {
+	background-color: #293449;
+}
+
+.purchase-navigation.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-button-logo {
+	width: 220px;
+	font-size: 25px;
+	line-height: 25px;
+	padding-top: 13px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #ee3643;
+}
+
+.header-search {
+	width: 270px; /* Пока так, потом под паддинги поправлю */
+}
+
+.purchase-navigation li {
+	width: 270px;
+	display: inline; /* Отображать как строчный элемент */
+}
+
+.purchase-navigation a {
+	font-size: 17px;
+	line-height: 18px;
+	color: #ffffff;
+}
+
+
+.info-panel {
+}
+
+.info-panel.container {
+	padding-top: 40px;
+	padding-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
 .info-panel-descriptor {
+	width: 200px;
+	padding-left: 50px;
+	padding-right: 50px;
 	font-family: Cuprum-Italic, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 23px;
 	color: #ee3643;
 }
- 
+
 .info-panel-contacts {
+	width: 300px;
+}
+
+a.info-panel-phone {
 	font-size: 21px;
 	line-height: 21px;
-	text-align: center;
-/* Пачиму не работает center??? */
 	color: #ee3643;
 }
 
 .info-panel-address {
 	font-size: 14px;
+	line-height: 24px;
 	text-align: center;
+}
 
+.user-navigation.list {
+	width: 300px;
+}
+
+.user-navigation li {
+	font-size: 21px;
+	line-height: 21px;
+	display: inline; /* Отображать как строчный элемент */
+	color: #000000;
 }
 
 .user-navigation a {
@@ -52,23 +140,224 @@ a {
 	color: #000000;
 }
 
-/* Вот здесь еще один фокус */
+.main-navigation {
 
-.purchase-navigation,
-.user-navigation,
-.site-navigation {
-	list-style: none;
-}
-/* Пачиму не работает когда все классы списков в группе выше??? */
-.popular-brands-list {
-	list-style: none;
 }
 
-.tabs-list {
-	list-style: none;
+.main-navigation.container {
+	height: 60px; /* Пока так, потом под паддинги поправлю */
+	display: flex;
+	background-color: #293449;
 }
 
-/* А вот здесь есть стилизация списка! */
+.main-navigation.list li {
+	display: inline; /* Отображать как строчный элемент */
+}
+
+.main-navigation.list a {
+	font-size: 17px;
+	line-height: 17px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+
+main {
+	width: auto;
+	height: auto;
+	background-color: #ffffff; 
+
+}
+
+
+/* Плитка категорий */
+
+
+section.items-category {
+	margin-top: 60px;
+
+}
+
+.items-category {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.items-category div {
+	width: 300px;
+	height: 123px;
+	margin-bottom: 20px; 
+	background-color: #ffbf47;
+}
+
+.items-header {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #ffffff; 
+}
+
+
+div.items-category-slider {
+	width: 620px;
+	height: 266px;
+	background-image: url(../img/1-slider.jpg);
+}
+
+p.slider-header {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+}
+
+
+/* Популярные товары */
+
+
+section.popular-items {
+	margin-top: 50px;
+
+}
+
+
+.popular-items-header {
+	width: 940px;
+	height: 89px;
+	background-color: #f9f5f0;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.popular-items.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.popular-items.container div {
+  width: 220px;
+  height: 318px;
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+}
+
+
+ /* Популярные бренды */
+
+
+section.popular-brands {
+	margin-top: 20px;
+
+}
+
+
+.popular-brands-header {
+	width: 940px;
+	height: 89px;
+	background-color: #f9f5f0;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.popular-brands.container {
+}
+
+.popular-brands.list {
+	margin: 0px;
+	padding: 0px;
+	width: 940px;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.popular-brands.list li {
+	display: block;
+	width: 220px;
+	height: 145px;
+	background-color: #ffffff;
+	border: solid 1px #eaeaea;
+}
+
+/* Сервисы */
+
+
+section.services {
+	margin-top: 85px;
+}
+
+.services {
+	background-color: #f4f7f9;
+}
+
+/* О компании и контакты */
+
+div.info.container {
+	margin-top: 80px; 
+	margin-bottom: 86px;
+	display: flex;
+	justify-content: space-between;
+}
+
+section.info-company {
+	width: 540px;
+}
+
+section.contacts {
+	width: 300px;
+}
+
+
+/* Футер */
+
+
+.main-footer {
+	background-color: #32425c;
+}
+
+.main-footer.container,
+.info-footer.container {
+	display: flex;
+}
+
+.footer-navigation-1.list li,
+.footer-navigation-2.list li {
+	display: inline;
+}
+
+.info-footer {
+	background-color: #293449;
+}
+
+
+/* 
+.info-panel-contacts {
+	font-size: 21px;
+	line-height: 21px;
+	text-align: center;
+/* Пачиму не работает center??? Display block, блочному родителю задать. а строчный элемент.
+	color: #ee3643;
+}
+
+.info-panel-address {
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+
+}
+
+/* А вот здесь есть стилизация списка!
 .info-company-list {
 	list-style: none;
 }
@@ -104,9 +393,8 @@ a {
 	color: #ffffff;
 }
 
-/* Пачиму не работает для слайдера???
 .items-category-slider {
-	background-image: url(img/1-slider.jpg);
+	background-image: url(../img/1-slider.jpg);
 }
 
 .slider-header {
@@ -114,12 +402,12 @@ a {
 	line-height: 36px;
 }
 
+/* Пачиму не работает для слайдера???
+
 .slider-description {
 	font-size: 18px;
 	line-height: 24px;
 }
-
-*/
 
 h2 {
 	font-size: 30px;
@@ -139,7 +427,7 @@ h3 {
 	text-align: center;
 }
 
-/* Откуда в браузере взялось зачеркивание и засечки??? */
+
 .old-price {
 	font-family: PTSans;
 	font-size: 18px;
