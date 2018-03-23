@@ -319,7 +319,81 @@ section.contacts {
 }
 
 
-/* Футер */
+/* !!!!!!!!!!!!!!!!!!КАТАЛОГ!!!!!!!!!!!!!!!!!! */
+
+.filter-items.container {
+	width: 940px;
+	display: flex;
+	justify-content: space-between;
+}
+
+section.breadcrumbs {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.catalog-name {
+	width: 940px;
+	height: 89px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f9f5f0;
+}
+
+/* Фильтры */
+
+
+/* Сортировка */
+
+.sort.list li {
+	display: inline;
+}
+
+
+/* Выдача товаров */
+
+section.items {
+	width: 700px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+.items div {
+	width: 220px;
+	height: 318px;
+	background-color: #ffffff;
+	border: solid 1px #eaeaea;
+}
+
+nav.pagination {
+	width: 700px;
+}
+
+
+/* Сео-тексты */
+
+section.seo-text {
+	background-color: #f4f7f9;
+	margin-top: 60px;
+	margin-bottom: 0px;
+}
+
+.seo-text div {
+	width: 940px;
+	padding-top: 40px;
+	padding-bottom: 70px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!ФУТЕР!!!!!!!!!!!!!!!!!! */
 
 
 .main-footer {
@@ -339,6 +413,7 @@ section.contacts {
 .info-footer {
 	background-color: #293449;
 }
+
 
 
 /* 
