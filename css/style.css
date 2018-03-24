@@ -41,6 +41,7 @@ header {
 
 .list {
 	list-style: none;
+	padding-left: 0px;
 }
 
 .container {
@@ -187,22 +188,31 @@ section.items-category {
 	justify-content: space-between;
 }
 
-.items-category div {
-	width: 300px;
-	height: 123px;
-	margin-bottom: 20px; 
+.item-category {
+	width: 248px;
+	height: 75px;
+
+	margin-bottom: 20px;
+
+	padding-top: 26px;
+	padding-bottom: 22px;
+	padding-left: 24px;
+	padding-right: 30px;
+
 	background-color: #ffbf47;
 }
 
 .items-header {
   font-size: 24px;
   font-weight: bold;
-  line-height: 1.25;
-  color: #ffffff; 
+  line-height: 30px;
+  color: #ffffff;
+  
+  margin: 0px;
 }
 
 
-div.items-category-slider {
+.items-category-slider {
 	width: 620px;
 	height: 266px;
 	background-image: url(../img/1-slider.jpg);
