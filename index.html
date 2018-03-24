@@ -43,7 +43,9 @@
           </ul>
         </div>
   		</div>
-  		<div class="main-navigation">
+
+<!-- Главная навигация -->
+
         <nav class="main-navigation container" aria-label="Навигация по сайту">
           <ul class="main-navigation list">
             <li><a class="main-nav-current" href="index.html">Главная</a></li>
@@ -55,12 +57,12 @@
             <li><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
-      </div>
   	</header>
   	
 
     <main>
 
+<!-- Плитка категорий -->
 
   		<section class="items-category">
   			<h1 class="visually-hidden">Сайт магазина Техномарт</h1>
@@ -78,9 +80,11 @@
   			</div>
         <!-- Как слайдер влияет на разметку? Сверстать оба слайда! Position absolute, z index 10 -->
   			<div class="items-category-slider">
-  				<p class="slider-header">Дрели</p>
-  				<p class="slider-description">Соседям на радость</p>
-  				<a class="button" href="" aria-label="Открыть каталог дрелей">Открыть каталог</a>
+          <div class="items-category-text">
+            <p class="slider-header">Дрели</p>
+            <p class="slider-description">Соседям на радость</p>
+          </div>
+  				<a class="slider red-button" href="" aria-label="Открыть каталог дрелей">Открыть каталог</a>
   			</div>
         <div class="items-category-float">
           <div class="item-category sale">
@@ -94,11 +98,12 @@
         </div>
   		</section>
 
+<!-- Популярные товары -->
 
   		<section class="popular-items">
-        <div class="popular-items-header">
-          <h2>Популярные товары</h2>
-          <a class="button" href="popular-items.html">Все популярные товары</a>
+        <div class="items header-block">
+          <h2>Популярные товары:</h2>
+          <a class="red-button" href="popular-items.html">Все популярные товары</a>
         </div>
         <div class="popular-items container">
           <div class="item-card">
@@ -129,11 +134,12 @@
         </div>
   		</section>
 
+<!-- Популярные бренды -->
 
   		<section class="popular-brands">
-        <div class="popular-brands-header">
-          <h2>Популярные производители</h2>
-          <a class="button" href="allbrands.html">Все производители</a>
+        <div class="brands header-block">
+          <h2>Популярные производители:</h2>
+          <a class="red-button" href="allbrands.html">Все производители</a>
         </div>
         <div class="popular-brands container">
           <ul class="popular-brands list">
@@ -181,43 +187,54 @@
         </div>
   		</section>
 
+<!-- Сервисы -->
 
   		<section class="services">
+
         <div class="services container">
-          <h2>Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <div class="tabs" aria-label="Наши сервисы">
-          <ul class="tabs list">
-            <li class="active">Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
-          </ul>
-          <div class="tabs-content-active">
-            <h3>Доставка</h3>
-            <p>
+
+          <div class="services header">
+            <h2>Сервисы</h2>
+            <p class="text13-24">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          </div>
+
+          <div class="tabs" aria-label="Наши сервисы">
+            <ul class="tab list">
+              <li class="active"><a href="#"></a>Доставка</li>
+              <li><a href="#"></a>Гарантия</li>
+              <li><a href="#"></a>Кредит</li>
+            </ul>
+          </div>
+
+          <div class="tabs-content">
+            <div class="tab-content active">
+              <h3>Доставка</h3>
+              <p class="text13-24">
               Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!
-            </p>
-          </div>
-          <div class="tabs-content">
-            <h3>Гарантия</h3>
-            <p>
+              </p>
+            </div>
+            <div class="tab-content">
+              <h3>Гарантия</h3>
+              <p class="text13-24">
               Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
               Дом уж восстановите как-нибудь сами.
-            </p>
-          </div>
-          <div class="tabs-content">
-            <h3>Кредит</h3>
-            <p>
+              </p>
+            </div>
+            <div class="tab-content">
+              <h3>Кредит</h3>
+              <p class="text13-24">
               Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.
-            </p>
-            <a class="button" href="#">Отправить заявку</a>
+              </p>
+              <a class="red-button" href="#">Отправить заявку</a>
+            </div>
+
           </div>
-        </div>
+
         </div>
   		</section>
 
@@ -226,22 +243,22 @@
 
         <section class="info-company">
           <h2>Компания Техномарт</h2>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
+          <p class="text13-24">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p class="text13-24">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
           <ul class="info-company list">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="button" href="company.html">Подробнее о компании</a>
+          <a class="red-button" href="company.html">Подробнее о компании</a>
         </section>
 
         <section class="contacts">
           <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами,заехав в наш офис:</p>
+          <p class="text13-24">Вы можете забрать товар сами,заехав в наш офис:</p>
           <map name="office"></map>
           <!-- Как правильно разметить карту? -->
-          <a class="button" href="#">Заблудились? Напишите нам!</a>
+          <a class="red-button" href="#">Заблудились? Напишите нам!</a>
       </section>
       </div>
     

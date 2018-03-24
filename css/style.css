@@ -14,7 +14,11 @@ body {
 h2 {
 	font-size: 30px;
 	line-height: 30px;
+	font-weight: 400px;
+	text-transform: uppercase;
+
 	color: #32425c;
+	margin: 0px;
 }
 
 a {
@@ -49,6 +53,61 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.red-button {
+	width: 250px;
+	height: 14px;
+	text-align: center;
+
+	border-radius: 4px;
+	display: inline-block;
+
+	padding-top: 13px;
+	padding-bottom: 11px;
+
+	font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	background-color: #ee3643;
+
+}
+
+.text13-24 {
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	width: 400px;
+	margin-bottom: 26px;
+}
+
+.header-block {
+	width: 886px;
+	height: 38px;
+	background-color: #f9f5f0;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+
+	padding-top: 25px;
+	padding-left: 30px;
+	padding-right: 24px;
+	padding-bottom: 26px;
+
+}
+
+.item-card {
+  width: 220px;
+  height: 318px;
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+
+  margin-top: 20px;
+}
+
+
 
 
 /* Пошла стилиация элементов */
@@ -141,14 +200,23 @@ a.info-panel-phone {
 	color: #000000;
 }
 
-.main-navigation {
-
+.main-navigation.container {
+	background-color: #293449;
 }
 
-.main-navigation.container {
-	height: 60px; /* Пока так, потом под паддинги поправлю */
+ul.main-navigation {
 	display: flex;
-	background-color: #293449;
+	justify-content: space-between;
+	margin: 0px;
+
+	width: 832px;
+	height: 18px;
+
+	padding-top: 19px;
+	padding-left: 54px;
+	padding-right: 54px;
+	padding-bottom: 24px;
+
 }
 
 .main-navigation.list li {
@@ -213,18 +281,82 @@ section.items-category {
 
 
 .items-category-slider {
-	width: 620px;
-	height: 266px;
+	width: 572px;
+	height: 218px;
+
+	padding-top: 26px;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-bottom: 22px;
+
 	background-image: url(../img/1-slider.jpg);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 p.slider-header {
   font-size: 36px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 36px;
   color: #ffffff;
+  text-transform: uppercase;
+
+  margin: 0px;
 }
 
+p.slider-description {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400px;
+  color: #ffffff;
+
+  margin-top: 8px;
+  margin-left: 0px; 
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.slider.red-button {
+	width: 195px;
+}
+
+
+
+
+.item-category.tools {
+	background-color: #3bbce3;
+}
+
+.item-category.equipment {
+	background-color: #dc91d8;
+}
+
+.item-category.sale {
+	background-color: #8ed78f;
+}
+
+.items-category-button {
+	width: 136px;
+	height: 14px;
+	text-align: center;
+
+	border-radius: 4px;
+	display: inline-block;
+
+	padding-top: 13px;
+	padding-bottom: 11px;
+	margin-top: 10px;
+
+	font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	background-color: rgba(0, 0, 0, 0.1);
+
+}
 
 /* Популярные товары */
 
@@ -234,28 +366,14 @@ section.popular-items {
 
 }
 
-
-.popular-items-header {
-	width: 940px;
-	height: 89px;
-	background-color: #f9f5f0;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	justify-content: space-between;
-}
-
 .popular-items.container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
-.popular-items.container div {
-  width: 220px;
-  height: 318px;
-  background-color: #ffffff;
-  border: solid 1px #eaeaea;
+.header-block h2 {
+	line-height: 38px;
 }
 
 
@@ -264,18 +382,6 @@ section.popular-items {
 
 section.popular-brands {
 	margin-top: 20px;
-
-}
-
-
-.popular-brands-header {
-	width: 940px;
-	height: 89px;
-	background-color: #f9f5f0;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	justify-content: space-between;
 
 }
 
@@ -295,21 +401,100 @@ section.popular-brands {
 .popular-brands.list li {
 	display: block;
 	width: 220px;
-	height: 145px;
+	height: 128px;
+	margin-top: 20px;
 	background-color: #ffffff;
 	border: solid 1px #eaeaea;
+	text-align: center;
+
+	padding-top: 17px;
 }
 
-/* Сервисы */
+.logo-link a {
+
+}
+
+/* Сервисы 
+
+- Есть проблема - если не задавать фиксированную высоту в помеченных местах -
+то абсолютно позиционированные элементы не влезают в контейнер и обезаются.
+Но тут задавать высоту фиксированно бы не хотелось, контент - то может меняться! */
 
 
 section.services {
 	margin-top: 85px;
+	background-color: #f4f7f9;
+	padding-top: 64px;
+	padding-bottom: 100px;
 }
 
-.services {
+.services.container {
+	width: 940px;
+ /* height: 522px; Можно зафиксировать */
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+div.services.header {
+	width: 940px;
+/* 	height: 96px; Можно зафиксировать */
+}
+
+.services.header h2 {
+	color: #000000;
+}
+
+ul.tab {
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 700px;
+	color: #ffffff;
+	width: 240px;
+    margin: 0;
+    background-color: #32425c;
+}
+
+.tab li {
+	height: 20px;
+	padding-top: 20px;
+	padding-bottom: 22px;
+	padding-left: 22px;
+	padding-right: 30px;
+
+	border: 1px solid #4d637b;
+	margin-bottom: -1px;
+}
+
+.tabs-content {
+	width: 300px;
+	margin-left: 80px;
+	position: relative;
+	overflow: hidden;
+}
+
+.tab-content {
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	top: 0;
+	left: 0;
 	background-color: #f4f7f9;
 }
+
+.tab-content.active {
+
+}
+
+.tab-content h3 {
+	font-size: 36px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #32425c;
+	margin-top: 0px; /* А если текста будет больше, то кнопка обрежется */
+}
+
+
 
 /* О компании и контакты */
 
@@ -329,42 +514,177 @@ section.contacts {
 }
 
 
-/* !!!!!!!!!!!!!!!!!!КАТАЛОГ!!!!!!!!!!!!!!!!!! */
 
-.filter-items.container {
-	width: 940px;
-	display: flex;
-	justify-content: space-between;
-}
+
+
+/* !!!!!!!!!!!!!!!!!!КАТАЛОГ!!!!!!!!!!!!!!!!!! */
 
 section.breadcrumbs {
 	width: 940px;
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
+
+	margin-top: 14px;
+}
+
+.breadcrumbs.list {
+	width: 360px;
+	height: 20px;
+}
+
+.breadcrumbs.list li {
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #000000;
+
+
+	display: inline;
 }
 
 
 .catalog-name {
-	width: 940px;
-	height: 89px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #f9f5f0;
+	background-color: #f2f6f8;
+	margin-top: 14px;
 }
 
-/* Фильтры */
 
 
-/* Сортировка */
+/* Сетка */
+
+.for-flex.container {
+	width: 940px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.flex-for-filter {
+	width: 220px;
+
+}
+
+.for-flex-left-zone {
+	width: 700px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+fieldset {
+	border: 0px;
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+}
+
+legend {
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 32px;
+
+}
+
+section.sort {
+	width: 664px;
+	height: 18px;
+
+	background-color: #f7f3ec;
+
+	padding-top: 10px;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 10px;
+
+	border-radius: 4px;
+
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.sort h3 {
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+
+	margin: 0px;
+}
+
+.sort.list {
+	margin: 0px;
+}
 
 .sort.list li {
 	display: inline;
 }
 
+.filter h3 {
+	width: 184px;
+	height: 18px;
+
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+
+	background-color: #f7f3ec;
+
+	padding-top: 10px;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 10px;
+
+	border-radius: 4px;
+
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+}
+
+.item-cards {
+	width: 700px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+nav.pagination {
+	width: 700px;
+}
+
+
+/*
+
+
+
+*/
+
+/* Сортировка */
+
+/*
+
+
+
+
+
+
+
+*/
+
 
 /* Выдача товаров */
 
-section.items {
+/*
+.items.container {
 	width: 700px;
 	display: flex;
 	flex-wrap: wrap;
@@ -382,6 +702,8 @@ section.items {
 nav.pagination {
 	width: 700px;
 }
+
+*/
 
 
 /* Сео-тексты */
