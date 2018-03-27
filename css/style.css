@@ -33,19 +33,30 @@ header {
 
 }
 
+
 /* Общие селекторы */
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="checkbox"].visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0px;
+  padding: 0px;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
 }
 
 .list {
 	list-style: none;
-	padding-left: 0px;
+	padding: 0px;
+	margin: 0px;
 }
 
 .container {
@@ -108,56 +119,83 @@ header {
 }
 
 
+/* Пошла стилизация элементов */
 
+.purchase-panel {
+	background-color: #293449;
+	/* Нужно, чтобы относительно него выровнять container c purchase-nav */
+}
 
-/* Пошла стилиация элементов */
+.purchase-nav.container {
+	width: 940px;
+	height: 42px;
+	display: flex;
+	flex-wrap: wrap;
+}
 
-.purchase-navigation-panel {
+.logo-button {
+    width: 220px;
+    padding-top: 10px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+
+    background-color: #ee3643;
+    box-shadow: 0 5px #b52933;
+}
+
+/* Форма поиска */
+.header-search {
+	width: 270px; /* Пока так, потом под паддинги поправлю */
 	background-color: #293449;
 }
 
-.purchase-navigation.container {
+.purchase-links  {
+	width: 450px;
+	height: 42px;
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 
-.header-button-logo {
-	width: 220px;
-	font-size: 25px;
-	line-height: 25px;
-	padding-top: 13px;
-	text-align: center;
-	color: #ffffff;
-	background-color: #ee3643;
-}
+.purchase-links a {
+	position: relative;
+	display: block;
+	vertical-align: middle;
 
-.header-search {
-	width: 270px; /* Пока так, потом под паддинги поправлю */
-}
-
-.purchase-navigation li {
-	width: 270px;
-	display: inline; /* Отображать как строчный элемент */
-}
-
-.purchase-navigation a {
 	font-size: 17px;
 	line-height: 18px;
 	color: #ffffff;
+
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 44px;
+	padding-right: 22px;
+
+	text-align: center;
 }
 
+a.buy-link {
+	background-color: #63a63e;
+	padding-left: 20px;
+	padding-right: 22px;
+
+}
 
 .info-panel {
 }
 
 .info-panel.container {
-	padding-top: 40px;
-	padding-bottom: 30px;
+	padding-top: 33px;
+	padding-bottom: 24px;
 	display: flex;
 	justify-content: space-between;
 }
 
 .info-panel-descriptor {
+	display: block;
 	width: 200px;
 	padding-left: 50px;
 	padding-right: 50px;
@@ -168,37 +206,63 @@ header {
 }
 
 .info-panel-contacts {
-	width: 300px;
+	width: 270px;
+	padding-top: 12px;
+	padding-right: 30px;
 }
 
 a.info-panel-phone {
+	display: block;
+
+	padding-top: 11px;
+	padding-left: 70px;
+	padding-right: 48px;
+	padding-bottom: 10px;
+
+	text-align: center;
 	font-size: 21px;
 	line-height: 21px;
 	color: #ee3643;
+
+	border: solid 3px #ffffff;
 }
 
 .info-panel-address {
+	display: block;
+	margin-top: 2px;
 	font-size: 14px;
 	line-height: 24px;
 	text-align: center;
 }
 
-.user-navigation.list {
+.user-navigation {
 	width: 300px;
-}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 
-.user-navigation li {
-	font-size: 21px;
-	line-height: 21px;
-	display: inline; /* Отображать как строчный элемент */
-	color: #000000;
+	padding-top: 12px;
 }
 
 .user-navigation a {
+	display: block;
 	font-size: 21px;
 	line-height: 21px;
 	color: #000000;
+
+	background-color: #ffffff;
+
+	padding-top: 12px;
+	padding-left: 26px;
+	padding-right: 26px;
+	padding-bottom: 12px;
+
+	text-align: center;
+
+	margin-left: 10px;
 }
+
+
 
 .main-navigation.container {
 	background-color: #293449;
@@ -243,7 +307,7 @@ main {
 
 
 section.items-category {
-	margin-top: 60px;
+	margin-top: 58px;
 
 }
 
@@ -262,8 +326,8 @@ section.items-category {
 
 	margin-bottom: 20px;
 
-	padding-top: 26px;
-	padding-bottom: 22px;
+	padding-top: 22px;
+	padding-bottom: 26px;
 	padding-left: 24px;
 	padding-right: 30px;
 
@@ -312,7 +376,7 @@ p.slider-description {
   font-weight: 400px;
   color: #ffffff;
 
-  margin-top: 8px;
+  margin-top: 2px;
   margin-left: 0px; 
   margin-right: 0px;
   margin-bottom: 0px;
@@ -362,7 +426,7 @@ p.slider-description {
 
 
 section.popular-items {
-	margin-top: 50px;
+	margin-top: 34px;
 
 }
 
