@@ -109,15 +109,6 @@ input[type="checkbox"].visually-hidden {
 
 }
 
-.item-card {
-  width: 220px;
-  height: 318px;
-  background-color: #ffffff;
-  border: solid 1px #eaeaea;
-
-  margin-top: 20px;
-}
-
 
 /* Пошла стилизация элементов */
 
@@ -583,6 +574,9 @@ section.contacts {
 
 /* !!!!!!!!!!!!!!!!!!КАТАЛОГ!!!!!!!!!!!!!!!!!! */
 
+
+
+
 section.breadcrumbs {
 	width: 940px;
 	margin-left: auto;
@@ -718,56 +712,92 @@ section.sort {
 	width: 700px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+
+	margin-top: 20px;
 }
 
 nav.pagination {
 	width: 700px;
 }
 
+/* Содержимое карточки товара */
 
-/*
+.item-card {
+	position: relative;
+	display: inline-block;
 
+	line-height:20px;
+    font-weight:bold;
+    text-align:center;
 
+	width:218px;
+	margin-top: 0px;
+	margin-left: 0px;
+    margin-right:20px;
+    margin-bottom:20px;
 
-*/
-
-/* Сортировка */
-
-/*
-
-
-
-
-
-
-
-*/
-
-
-/* Выдача товаров */
-
-/*
-.items.container {
-	width: 700px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	
+    border:1px solid #ccc;
 }
 
-.items div {
-	width: 220px;
-	height: 318px;
-	background-color: #ffffff;
-	border: solid 1px #eaeaea;
+.item-card:nth-child(3n) {
+	margin-right: 0px; 
 }
 
-nav.pagination {
-	width: 700px;
+.item-card h3 {
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+
+
+	min-height:40px;
+    padding:0 25px;
+    margin-top:10px;
+    margin-bottom:15px;
 }
 
-*/
+.new-price {
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+
+	position:relative;
+    width:80px;
+    margin:10px auto;
+    margin-bottom:20px;
+
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+
+
+    color:white;
+    background:#ee3643;
+    border-radius:3px;
+}
+
+.new-price:after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:-20px;
+    width:0;
+    height:0;
+    border:20px solid white;
+    border-left-color:#ee3643;
+}
+
+.old-price {
+	font-family: PTSans, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+
+	min-height:20px;
+    margin-top:15px;
+    margin-bottom:10px;
+    color:#999;
+    text-decoration:line-through;
+}
 
 
 /* Сео-тексты */
