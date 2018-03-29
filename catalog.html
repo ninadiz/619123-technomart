@@ -36,27 +36,32 @@
             <p class="info-panel-address" aria-label="Наш адрес">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             </p>
           </div>
-          <ul class="user-navigation list">
-            <li><a href="profile.html">Равшан Джамшутович</a></li>
-            <li><a href="logout.html">Выйти</a></li>
-            <li><a href="purchase-history.html">Мои заказы</a></li>
-            <li><a href="account.html">Личный кабинет</a></li>
-          </ul>
+          <div>
+            <ul class="user-navigation list">
+              <li><a class="customer-name" href="profile.html">Равшан Джамшутович</a></li>
+            </ul>
+            <ul class="personal-links list">
+              <li><a href="purchase-history.html">Мои заказы</a></li>
+              <li><a href="account.html">Личный кабинет</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
 <!-- Главная навигация -->
 
-        <nav class="main-navigation container" aria-label="Навигация по сайту">
-          <ul class="main-navigation list">
-            <li><a class="main-nav-current" href="index.html">Главная</a></li>
-            <li><a href="company.html">Компания</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="special-offer.html">Спецпредложения</a></li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
+        <nav class="container" aria-label="Навигация по сайту">
+          <div class="main-navigation"> <!-- Можно без дива)) Но тогда получится не как в дизайне, а без увеличенных отступов слева и справа -->
+            <ul class="main-nav list">
+              <li><a class="main-nav-current" href="index.html">Главная</a></li>
+              <li><a href="company.html">Компания</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="special-offer.html">Спецпредложения</a></li>
+              <li><a href="delivery.html">Доставка</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
         </nav>
     </header>
 
@@ -175,6 +180,10 @@
         <!-- Выдача -->
         <section class="item-cards">
           <div class="item-card">
+          	<div class="actions">
+            	<a href="#" class="buy">Купить</a>
+            	<a href="#" class="bookmark">В закладки</a>
+            </div>
             <img class="item-pic" src="img/snippet-18927.jpg" width="200" height="160" alt="Фото товара">
             <h3>Перфоратор BOSCH BFG 9000</h3>
             <p class="old-price">32500 Р.</p>
@@ -264,33 +273,40 @@
 
 
     <footer class="main-footer">
-      <div class="main-footer container">
-        <label>
-          <a class="footer-button-logo" href="index.html">ТЕХНОМАРТ</a>
-        Вернуться на главную страницу
-        </label>
-        <p> г. Санкт-Петербург, ул. Б. Конюшенная, д.
-        19/8 +7 (812) 555-05-55
-        </p>
-        <ul class="footer-navigation-1 list">
-          <li><a class="footer-nav-link" href="company.html">Компания</a></li>
-          <li><a class="footer-nav-link" href="catalog.html">Каталог</a></li>
-          <li><a class="footer-nav-link" href="news.html">Новости</a></li>
-          <li><a class="footer-nav-link" href="delivery.html">Доставка</a></li>
-          <li><a class="footer-nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-        <ul class="footer-navigation-2 list">
-          <li><a class="footer-nav-link" href="materials.html">Материалы</a></li>
-          <li><a class="footer-nav-link" href="tech">Техника</a></li>
-          <li><a class="footer-nav-link" href="equipment.html">Инструмент</a></li>
-          <li><a class="footer-nav-link" href="special-offer.html">Спецпредложения</a></li>
-        </ul>
+
+      <div class="footer-flex container">
+
+        <div class="footer-group-f">
+          <div class="footer-logo">
+            <a class="footer-logo-button">ТЕХНОМАРТ</a>
+          </div>
+          <ul class="footer-nav-f list">
+            <li><a href="company.html">Компания</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group-s">
+          <div class="footer-description"> г. Санкт-Петербург, ул. Б. Конюшенная, д.
+          19/8 +7 (812) 555-05-55
+          </div>
+          <ul class="footer-nav-s list">
+            <li><a href="materials.html">Материалы</a></li>
+            <li><a href="tech">Техника</a></li>
+            <li><a href="equipment.html">Инструмент</a></li>
+            <li><a href="special-offer.html">Спецпредложения</a></li>
+          </ul>
+        </div>
+
       </div>
     </footer>
 
 
     <footer class="info-footer">
-      <div class="info-footer container">
+      <div class="info-footer-flex container">
         <p class="footer-copyright">
           &copy; 2010–2017 Компания Техномарт
           Все права защищены
@@ -312,7 +328,7 @@
           <a href="https://htmlacademy.ru">htmlacademy.ru</a>
         </p>
       </div>
-      </footer>
+    </footer>
 
 
   </body>

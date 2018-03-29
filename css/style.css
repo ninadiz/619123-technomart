@@ -33,6 +33,27 @@ header {
 
 }
 
+/* Наведения на ссылки  */
+
+.purchase-links a:hover {
+	background-color: #161d29;
+}
+
+.main-nav a:hover {
+	background-color: #293449;
+}
+
+.personal-links a:hover {
+	color: #ee3643;
+}
+
+a.buy-link:hover {
+	/* a. нужно, чтобы победить каскадность - иначе наследутся стили выше, как более редкие*/
+	background-color: #518534;
+}
+
+
+
 
 /* Общие селекторы */
 
@@ -169,6 +190,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 a.buy-link {
+	/* a. нужно, чтобы победить каскадность - иначе наследутся стили выше, как более редкие*/
 	background-color: #63a63e;
 	padding-left: 20px;
 	padding-right: 22px;
@@ -235,7 +257,7 @@ a.info-panel-phone {
 	padding-top: 12px;
 }
 
-.user-navigation a {
+.login, .register {
 	display: block;
 	font-size: 21px;
 	line-height: 21px;
@@ -253,37 +275,31 @@ a.info-panel-phone {
 	margin-left: 10px;
 }
 
-
-
-.main-navigation.container {
-	background-color: #293449;
+.main-navigation {
+	padding-left: 20px; /* Для этих кривых отступов по бокам */
+	padding-right: 20px;
+	background-color: #32425c;
 }
 
-ul.main-navigation {
+.main-nav {
 	display: flex;
 	justify-content: space-between;
-	margin: 0px;
-
-	width: 832px;
-	height: 18px;
-
-	padding-top: 19px;
-	padding-left: 54px;
-	padding-right: 54px;
-	padding-bottom: 24px;
-
 }
 
-.main-navigation.list li {
-	display: inline; /* Отображать как строчный элемент */
-}
+.main-nav a {
+	display: block;
+	vertical-align: middle;
 
-.main-navigation.list a {
+	padding-top: 21px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 21px;
+
 	font-size: 17px;
 	line-height: 17px;
-	font-weight: 400;
 	color: #ffffff;
 }
+
 
 
 main {
@@ -575,7 +591,39 @@ section.contacts {
 /* !!!!!!!!!!!!!!!!!!КАТАЛОГ!!!!!!!!!!!!!!!!!! */
 
 
+.personal-links {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 8px;
+}
 
+.personal-links a {
+	display: block;
+
+	font-size: 16px;
+	line-height: 18px;
+	text-decoration: underline;
+
+	padding-left: 18px;
+	padding-right: 18px;
+
+	color: #32425c;
+
+}
+
+.customer-name {
+	display: block;
+	font-size: 21px;
+	line-height: 21px;
+	color: #000000;
+
+	background-color: #ffffff;
+
+	padding-top: 12px;
+	padding-left: 44px;
+	padding-right: 70px;
+	padding-bottom: 12px;
+}
 
 section.breadcrumbs {
 	width: 940px;
@@ -671,8 +719,9 @@ section.sort {
 
 .sort h3 {
 	font-family: PTSans, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 18px;
+	text-transform: uppercase;
 
 	margin: 0px;
 }
@@ -690,8 +739,9 @@ section.sort {
 	height: 18px;
 
 	font-family: PTSans, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 18px;
+	text-transform: uppercase;
 
 	background-color: #f7f3ec;
 
@@ -708,6 +758,8 @@ section.sort {
 	margin-bottom: 0px;
 }
 
+/* Сетка блока, где карточки товаров */
+
 .item-cards {
 	width: 700px;
 	display: flex;
@@ -715,6 +767,8 @@ section.sort {
 
 	margin-top: 20px;
 }
+
+/* Чтобы пагинация была внизу */
 
 nav.pagination {
 	width: 700px;
@@ -739,7 +793,13 @@ nav.pagination {
     border:1px solid #ccc;
 }
 
-.item-card:nth-child(3n) {
+.item-cards .item-card:nth-child(3n) {
+	margin-right: 0px; 
+}
+
+/* Поправка для главной страницы, где 4 в ряд */
+.popular-items .item-card {
+	margin-top: 20px;
 	margin-right: 0px; 
 }
 
@@ -799,6 +859,50 @@ nav.pagination {
     text-decoration:line-through;
 }
 
+.item-card .actions{
+    position: absolute;
+    top:0;
+    left:0;
+    width:218px;
+    height:88px;
+    padding:40px 0;
+    background-color:rgba(255,255,255,0.9);
+    z-index:10;
+}
+
+.item-card .actions .buy,
+.item-card .actions .bookmark{
+    display: block;
+    width:129px;
+    margin:0 auto;
+    margin-bottom:7px;
+    padding:7px 0;
+    border:3px solid #63a63e;
+    border-bottom-color:#367315; 
+    background-color:#63a63e;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Cuprum", Arial, sans-serif;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;    
+    border-radius: 3px;
+}
+
+.item-card .actions .bookmark {
+    color:#32425c;
+    background:white;
+    border-bottom-color:#63a63e;
+}
+.item-card .actions{
+    display:none;
+}
+.item-card:hover .actions {
+    display: block;
+}
+
+
 
 /* Сео-тексты */
 
@@ -821,145 +925,99 @@ section.seo-text {
 
 /* !!!!!!!!!!!!!!!!!!ФУТЕР!!!!!!!!!!!!!!!!!! */
 
-
 .main-footer {
 	background-color: #32425c;
 }
 
-.main-footer.container,
-.info-footer.container {
+.footer-flex {
 	display: flex;
+	flex-wrap: wrap;
 }
 
-.footer-navigation-1.list li,
-.footer-navigation-2.list li {
-	display: inline;
+.footer-group-f,
+.footer-group-s {
+	display: flex;
+	flex-wrap: wrap;
+	width: 940px;
+	justify-content: space-between;
 }
+
+.footer-nav-f,
+.footer-nav-s {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.footer-group-s {
+	margin-top: 36px;
+	margin-bottom: 50px;
+}
+
+.footer-logo {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-logo-button {
+    width: 220px;
+    padding-top: 18px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+
+    background-color: #ee3643;
+    box-shadow: 0 5px #b52933;
+}
+
+.footer-nav-f a {
+	display: block;
+	font-size: 18px;
+	line-height: 20px;
+	color: #ffffff;
+
+	padding-top: 40px;
+	padding-bottom: 2px;
+	padding-left: 60px;
+}
+
+.footer-description {
+	font-size: 18px;
+	line-height: 22px;
+	width: 320px;
+	color: #ffffff;
+}
+
+.footer-nav-s a {
+	display: block;
+	font-size: 18px;
+	line-height: 20px;
+	color: #ffffff;
+
+	padding-top: 0px;
+	padding-bottom: 2px;
+	padding-left: 60px;
+
+	color: #ffd180;
+}
+
 
 .info-footer {
 	background-color: #293449;
 }
 
-
-
-/* 
-.info-panel-contacts {
-	font-size: 21px;
-	line-height: 21px;
-	text-align: center;
-/* Пачиму не работает center??? Display block, блочному родителю задать. а строчный элемент.
-	color: #ee3643;
-}
-
-.info-panel-address {
-	font-size: 14px;
-	line-height: 24px;
-	text-align: center;
-
-}
-
-/* А вот здесь есть стилизация списка!
-.info-company-list {
-	list-style: none;
-}
-
-.purchase-navigation a,
-.site-navigation a {
-	color: #ffffff;
-}
-
-.purchase-navigation a:hover,
-.purchase-navigation a:focus,
-.site-navigation a:hover,
-.site-navigation a:focus {
-	color: #293449;
-}
-
-.items-category div {
-	background-color: #ffbf47;
-}
-
-.items-category p {
-	font-size: 24px;
-	line-height: 30px;
-	font-weight: 700;
-
-	color: #ffffff;
-}
-
-.items-category a {
-	font-size: 14px;
-	line-height: 17px;
-
-	color: #ffffff;
-}
-
-.items-category-slider {
-	background-image: url(../img/1-slider.jpg);
-}
-
-.slider-header {
-	font-size: 36px;
-	line-height: 36px;
-}
-
-/* Пачиму не работает для слайдера???
-
-.slider-description {
-	font-size: 18px;
-	line-height: 24px;
-}
-
-h2 {
-	font-size: 30px;
-	line-height: 30px;
-
-	color: #32425c;
-}
-
-a.button {
-	color: #ffffff;
-	background-color: #ee3643;
-}
-
-h3 {
-	font-size: 18px;
-	line-height: 20px;
-	text-align: center;
+.footer-copyright {
+	margin: 0px;
 }
 
 
-.old-price {
-	font-family: PTSans;
-	font-size: 18px;
-	line-height: 18px;
-	font-weight: 700;
-	text-align: center;
 
-	color: #a9a9a9;
-}
 
-.new-price {
-	font-family: PTSans;
-	font-size: 18px;
-	line-height: 18px;
-	font-weight: 700;
-	text-align: center;
 
-	color: #ffffff;
 
-	background-color: #ee3643;
-}
 
-.services h2,
-.info-company h2,
-.contacts h2 {
-	color: #000000;
-}
 
-.services h3 {
-	font-size: 36px;
-	line-height: 36px;
 
-	color: #32425c;
-}
+
