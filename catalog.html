@@ -96,14 +96,22 @@
               <!-- Фильтр по цене -->
               <fieldset>
                 <legend>Цена:</legend>
-                <label for="filter-price" class="visually-hidden">Диапазон цен</label>
-                <input id="filter-price" type="range" name="price">
 
-                <label for="filter-price-from" class="visually-hidden">Минимальная цена</label>
-                <input id="filter-price-from" type="number" name="price-from">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle min-toggle"></div>
+                  <div class="toggle max-toggle"></div>
+                </div>
 
-                <label for="filter-price-to" class="visually-hidden">Максимальная цена</label>
-                <input id="filter-price-to" type="number" name="price-to">
+                <div class="price-range">
+                  <label for="filter-price-from" class="visually-hidden">Минимальная цена</label>
+                  <input id="filter-price-from" type="number" name="price-from" value="0" class="price-min">
+                  <p>—</p>
+                  <label for="filter-price-to" class="visually-hidden">Максимальная цена</label>
+                  <input id="filter-price-to" type="number" name="price-to" value="30000" class="price-max">
+                </div>
               </fieldset>
               
               <!-- Фильтр по производителю -->
@@ -112,27 +120,27 @@
                 <ul class="filter-brands list">
                   <li>
                    <label for="filter-bosh" class="visually-hidden">Bosh</label>
-                    <input id="filter-bosh" type="checkbox" name="Bosh">
+                    <input id="filter-bosh" type="checkbox" name="Bosh" class="filter-brand">
                    Bosh
                   </li>
                   <li>
                     <label for="filter-interskol" class="visually-hidden">Интерскол</label>
-                    <input id="filter-interskol" type="checkbox" name="Interskol">
+                    <input id="filter-interskol" type="checkbox" name="Interskol" class="filter-brand">
                     Интерскол
                   </li>
                   <li>
                     <label for="filter-makita" class="visually-hidden">Makita</label>
-                    <input id="filter-makita" type="checkbox" name="Makita">
+                    <input id="filter-makita" type="checkbox" name="Makita" class="filter-brand">
                     Makita
                   </li>
                   <li>
                     <label for="filter-deWalt" class="visually-hidden">DeWalt</label>
-                    <input id="filter-deWalt" type="checkbox" name="DeWalt">
+                    <input id="filter-deWalt" type="checkbox" name="DeWalt" class="filter-brand">
                     DeWalt
                   </li>
                   <li>
                     <label for="filter-hitachi" class="visually-hidden">Hitachi</label>
-                    <input id="filter-hitachi" type="checkbox" name="Hitachi">
+                    <input id="filter-hitachi" type="checkbox" name="Hitachi" class="filter-brand">
                     Hitachi
                   </li>
                 </ul>
@@ -239,17 +247,19 @@
             <p class="new-price">25500 Р.</p>
           </div>
 
-          <!-- Как сделать доступную пагинацию? -->
-          <nav class="pagination" aria-label="pagination navigation">
-            <p class="visually-hidden">Переход к следующим страницам категории перфораторы</p>
-            <a class="pagination-button-active" aria-label="текущая страница, страница 1">1</a>
-            <a class="pagination-button" aria-label="на страницу 2" href="#2">2</a>
-            <a class="pagination-button" aria-label="на страницу 3" href="#3">3</a>
-            <a class="pagination-button" aria-label="на страницу 4" href="#4">4</a>
-            <a class="pagination-button-next" aria-label="на страницу" href="#next">Следующая</a>
-            <!-- Это же переключит на 2 страницу по сути? -->
-            <!-- Может это все же кнопки? -->
+          <nav class="pagination">
+            <ul>
+              <li><a class="pagination-button active" aria-label="текущая страница, страница 1">1</a>
+              </li>
+              <li><a class="pagination-button" aria-label="на страницу 2" href="#">2</a>
+              </li>
+              <li><a class="pagination-button" aria-label="на страницу 3" href="#">3</a>
+              </li>
+              <li><a class="pagination-button" aria-label="на следующую страницу" href="#">Следующая</a>
+             </li>
+            </ul>
           </nav>
+
         </section>
       </div>
 
@@ -311,12 +321,12 @@
           &copy; 2010–2017 Компания Техномарт
           Все права защищены
         </p>
-        <div>
+        <div class="social-buttons">
           <b class="visually-hidden">Присоединяйтесь к нам в социальных сетях</b>
           <ul class="social list">
-            <li><a class="social-button" href="#" aria-label="Вконтакте">Вконтакте</a></li>
-            <li><a class="social-button" href="#" aria-label="Фейсбук">Фейсбук</a></li>
-            <li><a class="social-button" href="#" aria-label="Инстаграм">Инстаграм</a></li>
+            <li><a class="social-button vk" href="#" aria-label="Вконтакте">Вконтакте</a></li>
+            <li><a class="social-button fb" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+            <li><a class="social-button inst" href="#" aria-label="Инстаграм">Инстаграм</a></li>
           </ul>
         </div>
         <p class="email-feedback">

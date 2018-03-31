@@ -584,6 +584,30 @@ section.contacts {
 	width: 300px;
 }
 
+.info-company {
+	position: relative;
+	margin: 11px 0px 34px 36px;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.info-company li {
+	position: relative;
+}
+
+
+.info-company li::before {
+	display: block;
+	content: ""; /* Я хз как но это работает)) */
+	position: absolute;
+	left: -36px;
+	top: 19px;
+	width: 25px;
+	height: 2px;
+	background: #fb565a;
+}
+
 
 
 
@@ -668,6 +692,8 @@ section.breadcrumbs {
 }
 
 .flex-for-filter {
+	display: flex;
+	flex-wrap: wrap;
 	width: 220px;
 
 }
@@ -681,6 +707,7 @@ section.breadcrumbs {
 }
 
 fieldset {
+	width: 220px; /* Почему ширина не работает? */
 	border: 0px;
 	margin-top: 20px;
 	margin-left: 0px;
@@ -692,6 +719,8 @@ legend {
 	font-family: PTSans, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 32px;
+	font-weight: 700;
+	text-transform: uppercase;
 
 }
 
@@ -758,6 +787,97 @@ section.sort {
 	margin-bottom: 0px;
 }
 
+/* Стилизация фильтра */
+
+.range-controls {
+	position: relative;
+	display: block;
+	height: 80px;
+	margin: 14px 0 10px;
+	padding: 0 30px;
+	overflow: hidden;
+	background-color: #f7f3ec;
+	border-radius: 3px
+}
+.scale {
+	height: 2px;
+	margin-top: 39px;
+	background: #d7dcde;
+
+}
+
+.bar {
+	width: 70%;
+	height: 2px;
+	margin-top: 39px;
+	background: #00ca74;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 4px;
+	height: 4px;
+	border: 8px solid #fff;
+	background: #ababab;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.range-controls .min-toggle {
+	left: 20px
+}
+
+.range-controls .max-toggle {
+	left: 140px
+}
+
+.price-range {
+	display: flex;
+	margin-bottom: 26px;
+}
+
+.price-min,
+.price-max {
+    width: 85px;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "PT Sans","Arial",sans-serif;
+    text-align: center;
+
+    padding: 6px;
+
+    background-color: #f7f3ec;
+    border: none;
+    border-radius: 3px;
+}
+
+.price-range p {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.filter-brand {
+    margin-bottom: 20px;
+    padding-left: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* Не работает трансформ, но в браузере видно */
+}
+
+
+
+
+
+
+
 /* Сетка блока, где карточки товаров */
 
 .item-cards {
@@ -767,6 +887,10 @@ section.sort {
 
 	margin-top: 20px;
 }
+
+
+
+
 
 /* Чтобы пагинация была внизу */
 
@@ -902,6 +1026,48 @@ nav.pagination {
     display: block;
 }
 
+.pagination {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.pagination ul {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination li {
+  min-width: 20px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 5px;
+}
+
+.pagination li:first-child {
+  padding-left: 0;
+}
+
+.pagination-button {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #e5e5e5;
+  color: #000000;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.pagination-button:hover {
+  border: 1px solid #bdc6ca;
+}
+
+.pagination-button.active {
+  color: #ffffff;
+  background: #ee3643;
+  border-style: inset;
+  border: none;
+  border: 1px solid #ee3643;
+}
+
 
 
 /* Сео-тексты */
@@ -1006,18 +1172,65 @@ section.seo-text {
 
 .info-footer {
 	background-color: #293449;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+}
+
+.info-footer-flex {
+	display: flex;
+	padding-top: 38px;
+	padding-bottom: 30px;
+	
 }
 
 .footer-copyright {
+	padding-right: 70px;
+	margin-right: 90px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.social-buttons {
+
+}
+
+.social {
+	display: flex;
+	justify-content: space-between;
+
+	padding-right: 120px;
+}
+
+.social-button {
+	display: inline-block;
+	vertical-align: top;
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	border-radius: 50%;
+	background: #212A3A;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	margin-right: 4px;
+}
+
+.email-feedback,
+.developed-by {
 	margin: 0px;
 }
 
 
+.email-feedback a,
+.developed-by a {
+	color: #ffd180;
+}
 
 
-
-
-
+.social-button .vk {
+	background: #212A3A url("../icons/s-vk-icon.svg") no-repeat -2px -55px;
+}
 
 
 
