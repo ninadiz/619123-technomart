@@ -341,8 +341,8 @@ a.info-panel-phone {
 	padding-top: 12px;
 }
 
-.login,
 .register {
+	position: relative;
 	display: block;
 	font-size: 21px;
 	line-height: 21px;
@@ -358,6 +358,39 @@ a.info-panel-phone {
 	text-align: center;
 
 	margin-left: 10px;
+}
+
+.login {
+	position: relative;
+	display: block;
+	font-size: 21px;
+	line-height: 21px;
+	color: #000000;
+
+	background-color: #ffffff;
+
+	padding-top: 12px;
+	padding-left: 48px;
+	padding-right: 26px;
+	padding-bottom: 12px;
+
+	text-align: center;
+
+	margin-left: 10px;
+}
+
+
+.login:before {
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	width: 20px;
+	height: 17px;
+	background-image: url("../icons/icon-login.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity: 0.5;
 }
 
 .login:hover,
