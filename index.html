@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
@@ -19,11 +20,11 @@
           <!-- Форма поиска -->
           <form class="header-search">
             <label for="search" class="visually-hidden">Поиск по сайту</label>
-            <input id="search" type="search" name="Поиск" placeholder="Поиск">
+            <input id="search" type="search" name="Поиск" placeholder="Поиск" class="search-field">
           </form>
           <ul class="purchase-links list">
-            <li><a href="bookmarks.html">Закладки: 0</a></li>
-            <li><a href="basket.html">Корзина: 0</a></li>
+            <li><a class="bookmarks-link" href="bookmarks.html">Закладки: 0</a></li>
+            <li><a class="basket-link" href="basket.html">Корзина: 0</a></li>
             <li><a class="buy-link" href="purchase.html">Оформить заказ</a></li>
           </ul>
         </div>
@@ -68,34 +69,50 @@
 
   		<section class="items-category">
   			<h1 class="visually-hidden">Сайт магазина Техномарт</h1>
+
   			<div class="item-category materials">
   				<p class="items-header">Материалы</p>
   				<a class="items-category-button" href="" aria-label="Открыть каталог материалов">На любой вкус</a>
   			</div>
+
   			<div class="item-category tools">
   				<p class="items-header">Инструмент</p>
   				<a class="items-category-button" href="" aria-label="Открыть каталог инструментов">На все случаи</a>
   			</div>
+
   			<div class="item-category equipment">
   				<p class="items-header">Техника</p>
   				<a class="items-category-button" href="" aria-label="Открыть каталог техники">Для стройки</a>
   			</div>
+
         <!-- Как слайдер влияет на разметку? Сверстать оба слайда! Position absolute, z index 10 -->
-  			<div class="items-category-slider">
-          <div class="items-category-text">
-            <p class="slider-header">Дрели</p>
-            <p class="slider-description">Соседям на радость</p>
+        <div class="items-category-slider">
+          <div class="slide perf">
+            <div class="items-category-text">
+              <p class="slider-header">Перфораторы</p>
+              <p class="slider-description">Настоящие мужские игрушки</p>
+            </div>
+            <a class="slider red-button" href="#" aria-label="Открыть каталог перфораторов">Открыть каталог</a>
           </div>
-  				<a class="slider red-button" href="" aria-label="Открыть каталог дрелей">Открыть каталог</a>
-  			</div>
-        <div class="items-category-float">
-          <div class="item-category sale">
-            <p class="items-header">Скидки 50%</p>
-            <a class="items-category-button" href="" aria-label="Открыть страницу товаров со скидками">На 350 товаров</a>
+          <div class="slide drill">
+            <div class="items-category-text">
+              <p class="slider-header">Дрели</p>
+              <p class="slider-description">Соседям на радость</p>
+            </div>
+            <a class="slider red-button" href="#" aria-label="Открыть каталог дрелей">Открыть каталог</a>
           </div>
-          <div class="item-category delivery">
-            <p class="items-header">Доставка</p>
-            <a class="items-category-button" href="" aria-label="Условия доставки">Бесплатно</a>
+        </div>
+
+        <div> <!-- Группировка для флекса -->
+          <div class="items-category-float">
+            <div class="item-category sale">
+              <p class="items-header">Скидки 50%</p>
+              <a class="items-category-button" href="" aria-label="Открыть страницу товаров со скидками">На 350 товаров</a>
+            </div>
+            <div class="item-category delivery">
+              <p class="items-header">Доставка</p>
+              <a class="items-category-button" href="" aria-label="Условия доставки">Бесплатно</a>
+            </div>
           </div>
         </div>
   		</section>
@@ -192,52 +209,60 @@
 <!-- Сервисы -->
 
   		<section class="services">
-
+        
         <div class="services container">
-
+          
           <div class="services header">
             <h2>Сервисы</h2>
             <p class="text13-24">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
 
-          <div class="tabs" aria-label="Наши сервисы">
-            <ul class="tab list">
-              <li class="active"><a href="#"></a>Доставка</li>
-              <li><a href="#"></a>Гарантия</li>
-              <li><a href="#"></a>Кредит</li>
-            </ul>
-          </div>
+          <div class="services-for-flex">
 
-          <div class="tabs-content">
-            <div class="tab-content active">
-              <h3>Доставка</h3>
-              <p class="text13-24">
-              Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!
-              </p>
+            <div class="tabs" aria-label="Наши сервисы">
+              <ul class="tab list">
+                <li class="tab-active"><a href="#">Доставка</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Кредит</a></li>
+              </ul>
             </div>
-            <div class="tab-content">
-              <h3>Гарантия</h3>
-              <p class="text13-24">
-              Если купленный у нас товар поломается или заискрит,<br>
-              а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
-              Дом уж восстановите как-нибудь сами.
-              </p>
-            </div>
-            <div class="tab-content">
-              <h3>Кредит</h3>
-              <p class="text13-24">
-              Залезть в долговую яму стало проще!<br>
-              Кредитные консультанты придут вам на помощь.
-              </p>
-              <a class="red-button" href="#">Отправить заявку</a>
+
+            <div class="tabs-content">
+
+              <div class="tab-content delivery">
+                <h3>Доставка</h3>
+                <p class="text13-24">
+                  Мы с удовольствием доставим ваш товар прямо<br>
+                  к вашему подъезду совершенно бесплатно!
+                  Ведь мы неплохо заработаем,<br>
+                  поднимая его на ваш этаж!
+                </p>
+              </div>
+            
+              <div class="tab-content guaranty hidden">
+                <h3>Гарантия</h3>
+                <p class="text13-24">
+                Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+                </p>
+              </div>
+
+              <div class="tab-content credit hidden">
+                <h3>Кредит</h3>
+                <p class="text13-24">
+                Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.
+                </p>
+                <a class="red-button" href="#">Отправить заявку</a>
+              </div>
+
             </div>
 
           </div>
 
         </div>
+
   		</section>
 
 
@@ -257,7 +282,7 @@
 
         <section class="contacts">
           <h2>Контакты</h2>
-          <p class="text13-24">Вы можете забрать товар сами,заехав в наш офис:</p>
+          <p class="text13-24">Вы можете забрать товар сами, заехав в наш офис:</p>
           <a class="map" href="#">
             <img src="img/map.jpg" width="300" height="158" alt="google-map">
           </a>

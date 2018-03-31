@@ -14,7 +14,7 @@ body {
 h2 {
 	font-size: 30px;
 	line-height: 30px;
-	font-weight: 400px;
+	font-weight: 400;
 	text-transform: uppercase;
 
 	color: #32425c;
@@ -32,28 +32,6 @@ header {
 	padding-bottom: 60px;
 
 }
-
-/* Наведения на ссылки  */
-
-.purchase-links a:hover {
-	background-color: #161d29;
-}
-
-.main-nav a:hover {
-	background-color: #293449;
-}
-
-.personal-links a:hover {
-	color: #ee3643;
-}
-
-a.buy-link:hover {
-	/* a. нужно, чтобы победить каскадность - иначе наследутся стили выше, как более редкие*/
-	background-color: #518534;
-}
-
-
-
 
 /* Общие селекторы */
 
@@ -110,8 +88,7 @@ input[type="checkbox"].visually-hidden {
 	font-family: PTSans, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
-	width: 400px;
-	margin-bottom: 26px;
+	margin: 0px;
 }
 
 .header-block {
@@ -160,10 +137,59 @@ input[type="checkbox"].visually-hidden {
 
 /* Форма поиска */
 .header-search {
-	width: 270px; /* Пока так, потом под паддинги поправлю */
+	width: 270px;
 	background-color: #293449;
+	position: relative;
 }
 
+.search-field {
+	width: 100%;
+	padding: 12px 0 12px 49px;
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Cuprum", "Arial", sans-serif;
+	color: #ffffff;
+	background-color: #293449;
+	border: none;
+	outline: none;
+}
+
+.search-field:hover {
+	background-color: #161d29;
+	color: #ffffff;
+}
+
+.search-field:focus,
+.search-field:active {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.header-search:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 18px;
+	width: 17px;
+	height: 17px;
+	background-image: url("../icons/icon-search.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity: 0.3;
+}
+
+/* Как заставить реагировать на наведение, фокус и актив? */
+.header-search:hover::before {
+	opacity: 0,5;
+}
+
+.header-search:focus::before {
+	background-image: url("../icons/icon-search-focus.svg");
+	opacity: 1;
+
+}
 .purchase-links  {
 	width: 450px;
 	height: 42px;
@@ -184,9 +210,44 @@ input[type="checkbox"].visually-hidden {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-left: 44px;
-	padding-right: 22px;
+	padding-right: 32px;
 
 	text-align: center;
+}
+
+.purchase-links a:hover {
+	background-color: #2d3a51;
+}
+
+.purchase-links a:active {
+	background-color: #161d29;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.bookmarks-link:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 18px;
+	width: 17px;
+	height: 17px;
+	background-image: url("../icons/icon-bookmark.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity: 0.3;
+}
+
+.basket-link:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 18px;
+	width: 17px;
+	height: 17px;
+	background-image: url("../icons/icon-cart.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity: 0.3;
 }
 
 a.buy-link {
@@ -194,8 +255,17 @@ a.buy-link {
 	background-color: #63a63e;
 	padding-left: 20px;
 	padding-right: 22px;
-
 }
+
+a.buy-link:hover {
+	background-color: #68ae41;
+}
+
+a.buy-link:active {
+	background-color: #518534;
+	color: rgba(255, 255, 255, 0.5);
+}
+
 
 .info-panel {
 }
@@ -226,6 +296,7 @@ a.buy-link {
 
 a.info-panel-phone {
 	display: block;
+	position: relative;
 
 	padding-top: 11px;
 	padding-left: 70px;
@@ -238,6 +309,19 @@ a.info-panel-phone {
 	color: #ee3643;
 
 	border: solid 3px #ffffff;
+}
+
+.info-panel-phone:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 14px;
+	width: 20px;
+	height: 20px;
+	background-image: url("../icons/icon-phone.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity: 1
 }
 
 .info-panel-address {
@@ -306,6 +390,9 @@ a.info-panel-phone {
 	color: #ffffff;
 }
 
+.main-nav a:hover {
+	background-color: #293449;
+}
 
 
 main {
@@ -349,7 +436,7 @@ section.items-category {
 
 .items-header {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
   color: #ffffff;
   
@@ -358,24 +445,41 @@ section.items-category {
 
 
 .items-category-slider {
+	position: relative;
 	width: 572px;
 	height: 218px;
+}
+
+.slide {
+	position: absolute;
+	width: 572px;
+	height: 218px;
+	top: 0;
+	left: 0;
 
 	padding-top: 26px;
 	padding-left: 24px;
 	padding-right: 24px;
 	padding-bottom: 22px;
 
-	background-image: url(../img/1-slider.jpg);
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
+.slide.perf {
+	z-index: 10;
+	background-image: url(../img/2-slider.jpg);
+}
+
+.slide.drill{
+	z-index: 1;
+	background-image: url(../img/1-slider.jpg);
+}
+
 p.slider-header {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 36px;
   color: #ffffff;
   text-transform: uppercase;
@@ -386,7 +490,7 @@ p.slider-header {
 p.slider-description {
   font-size: 17px;
   line-height: 18px;
-  font-weight: 400px;
+  font-weight: 400;
   color: #ffffff;
 
   margin-top: 2px;
@@ -503,7 +607,7 @@ section.popular-brands {
 
 
 section.services {
-	margin-top: 85px;
+	margin-top: 80px;
 	background-color: #f4f7f9;
 	padding-top: 64px;
 	padding-bottom: 100px;
@@ -526,45 +630,91 @@ div.services.header {
 	color: #000000;
 }
 
-ul.tab {
-	font-size: 20px;
-	line-height: 20px;
-	font-weight: 700px;
-	color: #ffffff;
-	width: 240px;
-    margin: 0;
-    background-color: #32425c;
+.header .text13-24 {
+	width: 440px;
+	margin-top: 26px;
+	margin-bottom: 66px;
+
 }
 
-.tab li {
+.services-for-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tabs {
+	display: flex;
+	position: relative;
+}
+
+.tabs:after {
+	content: "";
+	position: absolute;
+	z-index: 30;
+	top: -45px;
+	left: 230px;
+	width: 15px;
+	height: 284px;
+	background: url(../img/shadow.png) no-repeat;
+	background-position: 0 0
+}
+
+.tab {
+	display: flex;
+	flex-direction: column;
+}
+
+.tab a {
+	display: block;
+    vertical-align: middle;
+    width: 186px;
+
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	color: #ffffff;
+
+    background-color: #32425c;
 	height: 20px;
+
 	padding-top: 20px;
-	padding-bottom: 22px;
+	padding-bottom: 20px;
 	padding-left: 22px;
 	padding-right: 30px;
 
 	border: 1px solid #4d637b;
+	margin-top: 0;
 	margin-bottom: -1px;
 }
 
+.tab-active a {
+	color: #32425c;
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+}
+
 .tabs-content {
-	width: 300px;
-	margin-left: 80px;
 	position: relative;
-	overflow: hidden;
+	width: 620px;
+	margin-left: 80px;
 }
 
 .tab-content {
-	width: 300px;
-	height: 400px;
+	width: 620px;
+	height: 300px;
 	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #f4f7f9;
+	top: 0px;
+	left: 0px;
 }
 
-.tab-content.active {
+.tab-content.delivery {
+	background-image: url(../img/3-car.png);
+	background-position: right, bottom;
+	background-repeat: no-repeat;
+}
 
+.tab-content.hidden {
+	display: none;
 }
 
 .tab-content h3 {
@@ -572,15 +722,19 @@ ul.tab {
 	line-height: 36px;
 	text-transform: uppercase;
 	color: #32425c;
-	margin-top: 0px; /* А если текста будет больше, то кнопка обрежется */
+	margin-top: 0px;
+	margin-bottom: 26px;
 }
 
+.tab-content p {
+	width: 296px;
+}
 
 
 /* О компании и контакты */
 
-div.info.container {
-	margin-top: 80px; 
+.info.container {
+	margin-top: 84px; 
 	margin-bottom: 86px;
 	display: flex;
 	justify-content: space-between;
@@ -599,24 +753,30 @@ section.contacts {
 	color: #000000;
 }
 
+.info .text13-24,
+.contacts .text13-24 {
+	margin-top: 26px;
+}
+
 .info-company {
 	position: relative;
-	margin: 11px 0px 34px 36px;
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 40px;
 }
 
+.info-company.list {
+	margin: 10px 0px 24px 36px;
+}
 .info-company li {
 	position: relative;
 }
 
-
 .info-company li::before {
 	display: block;
-	content: ""; /* Я хз как но это работает)) */
+	content: ""; /* Я хз как, но это работает)) */
 	position: absolute;
-	left: -36px;
+	left: -36px; /* Хитрость */
 	top: 19px;
 	width: 25px;
 	height: 2px;
@@ -627,8 +787,11 @@ section.contacts {
 	display: block;
 	width: 300px;
 	height: 158px;
-	margin-bottom: 37px
+	margin-bottom: 41px;
+    margin-top: 30px;
 }
+
+
 
 
 
@@ -655,6 +818,10 @@ section.contacts {
 
 	color: #32425c;
 
+}
+
+.personal-links a:hover {
+	color: #ee3643;
 }
 
 .customer-name {
@@ -932,15 +1099,15 @@ nav.pagination {
 	position: relative;
 	display: inline-block;
 
-	line-height:20px;
-    font-weight:bold;
-    text-align:center;
+	line-height: 20px;
+    font-weight: 700;
+    text-align: center;
 
-	width:218px;
+	width: 218px;
 	margin-top: 0px;
 	margin-left: 0px;
-    margin-right:20px;
-    margin-bottom:20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 
     border:1px solid #ccc;
 }
@@ -953,6 +1120,7 @@ nav.pagination {
 .popular-items .item-card {
 	margin-top: 20px;
 	margin-right: 0px; 
+	margin-bottom: 0px;
 }
 
 .item-card h3 {
@@ -963,8 +1131,7 @@ nav.pagination {
 
 	min-height:40px;
     padding:0 25px;
-    margin-top:10px;
-    margin-bottom:15px;
+    margin: 0px;
 }
 
 .new-price {
@@ -973,9 +1140,9 @@ nav.pagination {
 	line-height: 20px;
 
 	position:relative;
-    width:80px;
-    margin:10px auto;
-    margin-bottom:20px;
+    width: 80px;
+    margin: 4px auto;
+    margin-bottom: 20px;
 
     padding-top: 10px;
     padding-left: 30px;
@@ -1004,11 +1171,16 @@ nav.pagination {
 	font-size: 18px;
 	line-height: 18px;
 
-	min-height:20px;
-    margin-top:15px;
-    margin-bottom:10px;
-    color:#999;
-    text-decoration:line-through;
+	min-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.item-pic {
+	margin-top: 10px;
+	margin-bottom: 4px;
 }
 
 .item-card .actions{

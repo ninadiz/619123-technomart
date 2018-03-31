@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
@@ -14,15 +15,15 @@
         <header>
       <div class="purchase-panel">
         <div class="purchase-nav container">
-          <a class="logo-button" aria-label="Логотип компании">ТЕХНОМАРТ</a>
+          <a class="logo-button" href="index.html" aria-label="Логотип компании">ТЕХНОМАРТ</a>
           <!-- Форма поиска -->
           <form class="header-search">
             <label for="search" class="visually-hidden">Поиск по сайту</label>
-            <input id="search" type="search" name="Поиск" placeholder="Поиск">
+            <input id="search" type="search" name="Поиск" placeholder="Поиск" class="search-field">
           </form>
           <ul class="purchase-links list">
-            <li><a href="bookmarks.html">Закладки: 0</a></li>
-            <li><a href="basket.html">Корзина: 0</a></li>
+            <li><a class="bookmarks-link" href="bookmarks.html">Закладки: 0</a></li>
+            <li><a class="basket-link" href="basket.html">Корзина: 0</a></li>
             <li><a class="buy-link" href="purchase.html">Оформить заказ</a></li>
           </ul>
         </div>
