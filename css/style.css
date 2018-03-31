@@ -257,7 +257,8 @@ a.info-panel-phone {
 	padding-top: 12px;
 }
 
-.login, .register {
+.login,
+.register {
 	display: block;
 	font-size: 21px;
 	line-height: 21px;
@@ -273,6 +274,11 @@ a.info-panel-phone {
 	text-align: center;
 
 	margin-left: 10px;
+}
+
+.login:hover,
+.register:hover {
+	color: #ee3643;
 }
 
 .main-navigation {
@@ -427,6 +433,10 @@ p.slider-description {
 
 	background-color: rgba(0, 0, 0, 0.1);
 
+}
+
+.items-category-button:hover {
+	  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Популярные товары */
@@ -584,6 +594,11 @@ section.contacts {
 	width: 300px;
 }
 
+.info h2,
+.contacts h2 {
+	color: #000000;
+}
+
 .info-company {
 	position: relative;
 	margin: 11px 0px 34px 36px;
@@ -656,6 +671,10 @@ section.contacts {
 	padding-bottom: 12px;
 }
 
+.customer-name:hover {
+	color: #ee3643;
+}
+
 section.breadcrumbs {
 	width: 940px;
 	margin-left: auto;
@@ -713,16 +732,18 @@ section.breadcrumbs {
 	justify-content: space-between;
 }
 
-fieldset {
+.field {
 	width: 220px; /* Почему ширина не работает? */
 	border: 0px;
 	margin-top: 20px;
 	margin-left: 0px;
-	margin-right: 20px;
+	margin-right: 0px;
 	margin-bottom: 0px;
+
+	padding: 0px;
 }
 
-legend {
+.field legend {
 	font-family: PTSans, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 32px;
