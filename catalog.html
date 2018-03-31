@@ -11,7 +11,7 @@
 
 
   <body>
-    
+
 
     <header>
       <div class="purchase-panel">
@@ -70,13 +70,15 @@
 
   	<main>
 
-
       <section class="breadcrumbs">
         <h2 class="visually-hidden">Хлебные крошки</h2>
         <ul class="breadcrumbs list">
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Перфораторы</a></li>
+          <li><a class="link-home" href="index.html">
+            <img src="icons/icon-home.svg" width="16" height="16" alt="на главную">
+          </a></li>
+          <li><a class="link1" href="#">Каталог</a></li>
+          <li><a class="link2" href="#">Инструмент</a></li>
+          <li><a class="link active" href="#">Перфораторы</a></li>
         </ul>
       </section>
 
@@ -174,16 +176,21 @@
 
       <!-- Сортировка и выдача левая зона -->
       <div class="for-flex-left-zone">
+
         <section class="sort">
-          <h3>Сортировка</h3>
+          <h3>Сортировка:</h3>
           <ul class="sort list">
-            <li class="sort-link-active"><a href="">По цене</a></li>
-            <li class="sort-link"><a href="">По типу</a></li>
-            <li class="sort-link"><a href="">По функционалу</a></li>
+            <li class="sort-link-active"><a href="#">По цене</a></li>
+            <li class="sort-link"><a href="#">По типу</a></li>
+            <li class="sort-link"><a href="#">По функционалу</a></li>
           </ul>
-          <ul class="sort-icon list">
-            <li class="sort-up-active"><a href="" aria-label="Сортировка по возрастанию"></a></li>
-            <li class="sort-down"><a href="" aria-label="Сортировка по убыванию"></a></li>
+          <ul class="sort-icons list">
+            <li ><a class="sort-up active" href="#">
+              <img src="icons/sort-up.svg" width="12" height="12" alt="Сортировка по возрастанию">
+            </a></li>
+            <li ><a class="sort-down" href="#">
+              <img src="icons/sort-down.svg" width="12" height="12" alt="Сортировка по убыванию">
+            </a></li>
           </ul>
         </section>
 
