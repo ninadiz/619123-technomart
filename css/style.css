@@ -996,15 +996,44 @@ section.breadcrumbs {
 	justify-content: space-between;
 }
 
-.field {
-	width: 220px; /* Почему ширина не работает? */
-	border: 0px;
+.filter {
+	width: 220px;
+	margin: 0px;
+}
+
+.filter h3 {
+	width: 184px;
+	height: 18px;
+
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+
+	background-color: #f7f3ec;
+
+	padding-top: 10px;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 10px;
+
+	border-radius: 4px;
+
 	margin-top: 20px;
 	margin-left: 0px;
-	margin-right: 0px;
+	margin-right: 20px;
 	margin-bottom: 0px;
+}
+
+.field {
+	border: 0px;
 
 	padding: 0px;
+
+	margin-top: 10px; 
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
 }
 
 .field legend {
@@ -1014,9 +1043,10 @@ section.breadcrumbs {
 	font-weight: 700;
 	text-transform: uppercase;
 
+	margin-bottom: 10px;
+
+
 }
-
-
 
 section.sort {
 	width: 664px;
@@ -1099,45 +1129,30 @@ section.sort {
     border-bottom: 1px solid #ee3643;
 }
 
-.filter h3 {
-	width: 184px;
-	height: 18px;
-
-	font-family: "PT Sans", Arial, sans-serif;
-	font-size: 13px;
-	line-height: 18px;
-	text-transform: uppercase;
-
-	background-color: #f7f3ec;
-
-	padding-top: 10px;
-	padding-left: 18px;
-	padding-right: 18px;
-	padding-bottom: 10px;
-
-	border-radius: 4px;
-
-	margin-top: 20px;
-	margin-left: 0px;
-	margin-right: 20px;
-	margin-bottom: 0px;
-}
-
 /* Стилизация фильтра */
+
+.divider {
+	margin-top: 14px;
+	margin-left: 0px;
+	margin-right: 0px;
+    margin-bottom: 14px;
+    border: 1px solid #e5e5e5;
+    border-bottom-width: 0;
+}
 
 .range-controls {
 	position: relative;
 	display: block;
 	height: 80px;
-	margin: 14px 0 10px;
-	padding: 0 30px;
+	margin-bottom: 10px;
+	padding: 0 29px;
 	overflow: hidden;
 	background-color: #f7f3ec;
 	border-radius: 3px
 }
 .scale {
 	height: 2px;
-	margin-top: 39px;
+	margin-top: 40px;
 	background: #d7dcde;
 
 }
@@ -1145,14 +1160,13 @@ section.sort {
 .bar {
 	width: 70%;
 	height: 2px;
-	margin-top: 39px;
+	margin-top: 40px;
 	background: #00ca74;
 }
 
 .range-controls .toggle {
 	position: absolute;
 	top: 30px;
-	left: 30px;
 	width: 4px;
 	height: 4px;
 	border: 8px solid #fff;
@@ -1171,12 +1185,12 @@ section.sort {
 
 .price-range {
 	display: flex;
-	margin-bottom: 26px;
 }
 
 .price-min,
 .price-max {
     width: 85px;
+    height: 29px;
     font-size: 17px;
     line-height: 18px;
     font-weight: 400;
@@ -1196,22 +1210,82 @@ section.sort {
 	margin-right: 10px;
 }
 
-.filter-brand {
-    margin-bottom: 20px;
-    padding-left: 35px;
+
+.filter-brands input[type=checkbox],
+.filter-supply input[type=radio] {
+    display: none;
+}
+
+.filter-brands input[type=checkbox] + label {
+    position: relative;
+    display: block;
+
+    font-family: "PT Sans","Arial",sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
-    color: #000;
-    cursor: pointer;
     text-transform: uppercase;
-    /* Не работает трансформ, но в браузере видно */
+    color: #000000;
+
+    margin-bottom: 20px;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.filter-brands input[type=checkbox] + label::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: -4px;
+    left: 0px;
+    background: url(../icons/checkbox-off.svg) no-repeat;
+
+}
+
+.filter-supply input[type=radio] + label {
+    position: relative;
+    display: block;
+
+    font-family: "PT Sans","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+
+    margin-bottom: 20px;
+    padding-left: 35px;
+    cursor: pointer;
 }
 
 
+.filter-supply input[type=radio] + label::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: -4px;
+    left: -1px;
+    background: url(../icons/radio-off.svg) no-repeat;;
 
+}
 
+.filter-show-result {
+    font-family: "PT Sans","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
 
+    padding: 11px 38px 8px;
+
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
 
 /* Сетка блока, где карточки товаров */
