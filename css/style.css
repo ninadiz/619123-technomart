@@ -463,6 +463,7 @@ section.items-category {
 }
 
 .item-category {
+	position: relative;
 	width: 248px;
 	height: 75px;
 
@@ -546,19 +547,46 @@ p.slider-description {
 }
 
 
+.item-category.materials {
+	background-image: url(../icons/icon-1.svg);
+    background-position: right 30px center;
+    background-repeat: no-repeat;
 
+	background-color: #ffbf47;
+}
 
 .item-category.tools {
+	background-image: url(../icons/icon-2.svg);
+    background-position: right 30px center;
+    background-repeat: no-repeat;
 	background-color: #3bbce3;
 }
 
 .item-category.equipment {
+	background-image: url(../icons/icon-3.svg);
+    background-position: right 30px center;
+    background-repeat: no-repeat;
+
 	background-color: #dc91d8;
 }
 
 .item-category.sale {
+	background-image: url(../icons/icon-4.svg);
+    background-position: right 30px center;
+    background-repeat: no-repeat;
+
 	background-color: #8ed78f;
 }
+
+.item-category.delivery {
+	background-image: url(../icons/icon-5.svg);
+    background-position: right 30px center;
+    background-repeat: no-repeat;
+
+	background-color: #ffbf47;
+}
+
+
 
 .items-category-button {
 	width: 136px;
@@ -743,15 +771,27 @@ div.services.header {
 
 .tab-content {
 	width: 620px;
-	height: 300px;
+	height: 282px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 }
 
 .tab-content.delivery {
-	background-image: url(../img/3-car.png);
-	background-position: right, bottom;
+	background-image: url(../img/tab-delivery.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.tab-content.guaranty {
+	background-image: url(../img/tab-guaranty.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.tab-content.credit {
+	background-image: url(../img/tab-credit.png);
+	background-position: right bottom;
 	background-repeat: no-repeat;
 }
 
@@ -1643,8 +1683,22 @@ section.seo-text {
 }
 
 
-.social-button .vk {
-	background: #212A3A url("../icons/s-vk-icon.svg") no-repeat -2px -55px;
+.social-button.vk {
+	background-image: url(../icons/s-vk-icon.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.social-button.fb {
+	background-image: url(../icons/s-fb-icon.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.social-button.insta {
+	background-image: url(../icons/s-insta-icon.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 
