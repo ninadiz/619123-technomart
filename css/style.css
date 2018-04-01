@@ -85,7 +85,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .text13-24 {
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	margin: 0px;
@@ -282,7 +282,8 @@ a.buy-link:active {
 	width: 200px;
 	padding-left: 50px;
 	padding-right: 50px;
-	font-family: Cuprum-Italic, Arial, sans-serif;
+	font-family: Cuprum, Arial, sans-serif;
+	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
 	color: #ee3643;
@@ -892,7 +893,7 @@ section.breadcrumbs {
 .breadcrumbs.list a {
 	display: block;
 	position: relative;
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -944,7 +945,7 @@ section.breadcrumbs {
 }
 
 .field legend {
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 32px;
 	font-weight: 700;
@@ -977,7 +978,7 @@ section.sort {
 
 .sort h3 {
 	width: 220px;
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1039,7 +1040,7 @@ section.sort {
 	width: 184px;
 	height: 18px;
 
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1201,7 +1202,7 @@ nav.pagination {
 }
 
 .item-card h3 {
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 20px;
 
@@ -1212,7 +1213,7 @@ nav.pagination {
 }
 
 .new-price {
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 20px;
 
@@ -1244,7 +1245,7 @@ nav.pagination {
 }
 
 .old-price {
-	font-family: PTSans, Arial, sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 18px;
 
